@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2023-10-17T00:09:04.419523+00:00",
+  "timestamp": "2023-10-22T00:09:52.816222+00:00",
   "repo": "decentralized-identity/bbs-signature",
   "labels": [
     {
@@ -34230,6 +34230,32 @@
           "updatedAt": "2023-10-15T17:42:22Z"
         }
       ],
+      "reviews": []
+    },
+    {
+      "number": 289,
+      "id": "PR_kwDOF8lax85dcSgx",
+      "title": "Fix broken url to JWP",
+      "url": "https://github.com/decentralized-identity/bbs-signature/pull/289",
+      "state": "OPEN",
+      "author": "lucagiorgino",
+      "authorAssociation": "NONE",
+      "assignees": [],
+      "labels": [],
+      "body": "Update draft-irtf-cfrg-bbs-signatures.md",
+      "createdAt": "2023-10-21T10:11:57Z",
+      "updatedAt": "2023-10-21T10:15:04Z",
+      "baseRepository": "decentralized-identity/bbs-signature",
+      "baseRefName": "main",
+      "baseRefOid": "9b491a754cc6668234aed4d408b598cfa62eabcd",
+      "headRepository": "lucagiorgino/bbs-signature",
+      "headRefName": "patch-1",
+      "headRefOid": "ab8cd3aa5d4a41ac35c88fa7a9e3d03da5077459",
+      "closedAt": null,
+      "mergedAt": null,
+      "mergedBy": null,
+      "mergeCommit": null,
+      "comments": [],
       "reviews": []
     }
   ]
