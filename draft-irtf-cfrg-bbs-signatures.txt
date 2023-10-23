@@ -2439,8 +2439,8 @@ Procedure:
    generator_seed with the value: ciphersuite_id ||
    "H2G_HM2S_BP_MESSAGE_GENERATOR_SEED".  More specifically,
 
-P1 = "8929dfbc7e6642c4ed9cba0856e493f8b9d7d5fcb0c31ef8fdcd34d50648a56c795e106
-e9eada6e0bda386b414150755"
+P1 = "8929dfbc7e6642c4ed9cba0856e493f8b9d7d5fcb0c31ef8fdcd34d50648a56c79
+  5e106e9eada6e0bda386b414150755"
 
    *Serialization functions*:
 
@@ -2485,8 +2485,8 @@ e9eada6e0bda386b414150755"
    generator_seed with the value: ciphersuite_id ||
    "H2G_HM2S_BP_MESSAGE_GENERATOR_SEED".  More specifically,
 
-P1 = "a8ce256102840821a3e94ea9025e4662b205762f9776b3a766c872b948f1fd225e7c596
-98588e70d11406d161b4e28c9"
+P1 = "a8ce256102840821a3e94ea9025e4662b205762f9776b3a766c872b948f1fd225e
+  7c59698588e70d11406d161b4e28c9"
 
    *Serialization functions*:
 
@@ -2587,25 +2587,16 @@ Procedure:
    ciphersuites (unless otherwise stated).  All the listed messages
    represent hex-encoded octet strings.
 
-   "9872ad089e452c7b6e283dfac2a80d58e8d0ff71cc4d5e310a1debdda4a45f02"
-
-   "c344136d9ab02da4dd5908bbba913ae6f58c2cc844b802a6f811f5fb075f9b80"
-
-   "7372e9daa5ed31e6cd5c825eac1b855e84476a1d94932aa348e07b73"
-
-   "77fe97eb97a1ebe2e81e4e3597a3ee740a66e9ef2412472c"
-
-   "496694774c5604ab1b2544eababcf0f53278ff50"
-
-   "515ae153e22aae04ad16f759e07237b4"
-
-   "d183ddc6e2665aa4e2f088af"
-
-   "ac55fb33a75909ed"
-
-   "96012096"
-
-   ""
+m_1 = "9872ad089e452c7b6e283dfac2a80d58e8d0ff71cc4d5e310a1debdda4a45f02"
+m_2 = "c344136d9ab02da4dd5908bbba913ae6f58c2cc844b802a6f811f5fb075f9b80"
+m_3 = "7372e9daa5ed31e6cd5c825eac1b855e84476a1d94932aa348e07b73"
+m_4 = "77fe97eb97a1ebe2e81e4e3597a3ee740a66e9ef2412472c"
+m_5 = "496694774c5604ab1b2544eababcf0f53278ff50"
+m_6 = "515ae153e22aae04ad16f759e07237b4"
+m_7 = "d183ddc6e2665aa4e2f088af"
+m_8 = "ac55fb33a75909ed"
+m_9 = "96012096"
+m_10 = ""
 
 7.3.  BLS12-381-SHAKE-256 Test Vectors
 
@@ -2616,30 +2607,27 @@ Procedure:
 
 7.3.1.  Key Pair
 
-   The following key pair will be used for the test vectors of the
-   BLS12-381-SHAKE-256 (#bls12-381-shake-256-ciphersuite) ciphersuite.
-
    Following the procedure defined in Section 3.4.1 with an input
    key_material value as follows
 
-"746869732d49532d6a7573742d616e2d546573742d494b4d2d746f2d67656e657261746
-52d246528724074232d6b6579"
+key_material = "746869732d49532d6a7573742d616e2d546573742d494b4d2d746f2d
+                67656e65726174652d246528724074232d6b6579"
 
    and the following key_info value
 
-"746869732d49532d736f6d652d6b65792d6d657461646174612d746f2d62652d7573656
-42d696e2d746573742d6b65792d67656e"
+key_info = "746869732d49532d736f6d652d6b65792d6d657461646174612d746f2d62
+            652d757365642d696e2d746573742d6b65792d67656e"
 
    Outputs the following SK value
 
-   "2eee0f60a8a3a8bec0ee942bfd46cbdae9a0738ee68f5a64e7238311cf09a079"
+ SK = "2eee0f60a8a3a8bec0ee942bfd46cbdae9a0738ee68f5a64e7238311cf09a079"
 
    Following the procedure defined in Section 3.4.2 with an input SK
    value as above produces the following PK value
 
-"92d37d1d6cd38fea3a873953333eab23a4c0377e3e049974eb62bd45949cdeb18fb0490
-edcd4429adff56e65cbce42cf188b31bddbd619e419b99c2c41b38179eb001963bc3deca
-ae0d9f702c7a8c004f207f46c734a5eae2e8e82833f3e7ea5"
+PK = "92d37d1d6cd38fea3a873953333eab23a4c0377e3e049974eb62bd45949cdeb18f
+      b0490edcd4429adff56e65cbce42cf188b31bddbd619e419b99c2c41b38179eb00
+      1963bc3decaae0d9f702c7a8c004f207f46c734a5eae2e8e82833f3e7ea5"
 
 7.3.2.  Map Messages to Scalars
 
@@ -2650,25 +2638,26 @@ ae0d9f702c7a8c004f207f46c734a5eae2e8e82833f3e7ea5"
    Each output scalar value is encoded to octets using I2OSP and
    represented in big endian order,
 
-   "1e0dea6c9ea8543731d331a0ab5f64954c188542b33c5bbc8ae5b3a830f2d99f"
-
-   "3918a40fb277b4c796805d1371931e08a314a8bf8200a92463c06054d2c56a9f"
-
-   "6642b981edf862adf34214d933c5d042bfa8f7ef343165c325131e2ffa32fa94"
-
-   "33c021236956a2006f547e22ff8790c9d2d40c11770c18cce6037786c6f23512"
-
-   "52b249313abbe323e7d84230550f448d99edfb6529dec8c4e783dbd6dd2a8471"
-
-   "2a50bdcbe7299e47e1046100aadffe35b4247bf3f059d525f921537484dd54fc"
-
-   "0e92550915e275f8cfd6da5e08e334d8ef46797ee28fa29de40a1ebccd9d95d3"
-
-   "4c28f612e6c6f82f51f95e1e4faaf597547f93f6689827a6dcda3cb94971d356"
-
-   "1db51bedc825b85efe1dab3e3ab0274fa82bbd39732be3459525faf70f197650"
-
-   "27878da72f7775e709bb693d81b819dc4e9fa60711f4ea927740e40073489e78"
+msg_scalar_1 = "1e0dea6c9ea8543731d331a0ab5f64954c188542b33c5bbc8ae5b3a8
+                30f2d99f"
+msg_scalar_2 = "3918a40fb277b4c796805d1371931e08a314a8bf8200a92463c06054
+                d2c56a9f"
+msg_scalar_3 = "6642b981edf862adf34214d933c5d042bfa8f7ef343165c325131e2f
+                fa32fa94"
+msg_scalar_4 = "33c021236956a2006f547e22ff8790c9d2d40c11770c18cce6037786
+                c6f23512"
+msg_scalar_5 = "52b249313abbe323e7d84230550f448d99edfb6529dec8c4e783dbd6
+                dd2a8471"
+msg_scalar_6 = "2a50bdcbe7299e47e1046100aadffe35b4247bf3f059d525f9215374
+                84dd54fc"
+msg_scalar_7 = "0e92550915e275f8cfd6da5e08e334d8ef46797ee28fa29de40a1ebc
+                cd9d95d3"
+msg_scalar_8 = "4c28f612e6c6f82f51f95e1e4faaf597547f93f6689827a6dcda3cb9
+                4971d356"
+msg_scalar_9 = "1db51bedc825b85efe1dab3e3ab0274fa82bbd39732be3459525faf7
+                0f197650"
+msg_scalar_10 = "27878da72f7775e709bb693d81b819dc4e9fa60711f4ea927740e40
+                 073489e78"
 
 7.3.3.  Message Generators
 
@@ -2678,73 +2667,77 @@ ae0d9f702c7a8c004f207f46c734a5eae2e8e82833f3e7ea5"
    corresponds to Q_1, while the next 10, to the message generators H_1,
    ..., H_10).
 
-"a9d40131066399fd41af51d883f4473b0dcd7d028d3d34ef17f3241d204e28507d7ecae
-032afa1d5490849b7678ec1f8"
-
-"903c7ca0b7e78a2017d0baf74103bd00ca8ff9bf429f834f071c75ffe6bfdec6d6dca15
-417e4ac08ca4ae1e78b7adc0e"
-
-"84321f5855bfb6b001f0dfcb47ac9b5cc68f1a4edd20f0ec850e0563b27d2accee6edff
-1a26b357762fb24e8ddbb6fcb"
-
-"b3060dff0d12a32819e08da00e61810676cc9185fdd750e5ef82b1a9798c7d76d63de3b
-6225d6c9a479d6c21a7c8bf93"
-
-"8f1093d1e553cdead3c70ce55b6d664e5d1912cc9edfdd37bf1dad11ca396a0a8bb0620
-92d391ebf8790ea5722413f68"
-
-"990824e00b48a68c3d9a308e8c52a57b1bc84d1cf5d3c0f8c6fb6b1230e4e5b8eb752fb
-374da0b1ef687040024868140"
-
-"b86d1c6ab8ce22bc53f625d1ce9796657f18060fcb1893ce8931156ef992fe56856199f
-8fa6c998e5d855a354a26b0dd"
-
-"b4cdd98c5c1e64cb324e0c57954f719d5c5f9e8d991fd8e159b31c8d079c76a67321a30
-311975c706578d3a0ddc313b7"
-
-"8311492d43ec9182a5fc44a75419b09547e311251fe38b6864dc1e706e29446cb3ea4d5
-01634eb13327245fd8a574f77"
-
-"ac00b493f92d17837a28d1f5b07991ca5ab9f370ae40d4f9b9f2711749ca200110ce651
-7dc28400d4ea25dddc146cacc"
-
-"965a6c62451d4be6cb175dec39727dc665762673ee42bf0ac13a37a74784fbd61e84e09
-15277a6f59863b2bb4f5f6005"
+Q_1 = "a9d40131066399fd41af51d883f4473b0dcd7d028d3d34ef17f3241d204e28507
+       d7ecae032afa1d5490849b7678ec1f8"
+H_1 = "903c7ca0b7e78a2017d0baf74103bd00ca8ff9bf429f834f071c75ffe6bfdec6d
+       6dca15417e4ac08ca4ae1e78b7adc0e"
+H_2 = "84321f5855bfb6b001f0dfcb47ac9b5cc68f1a4edd20f0ec850e0563b27d2acce
+       e6edff1a26b357762fb24e8ddbb6fcb"
+H_3 = "b3060dff0d12a32819e08da00e61810676cc9185fdd750e5ef82b1a9798c7d76d
+       63de3b6225d6c9a479d6c21a7c8bf93"
+H_4 = "8f1093d1e553cdead3c70ce55b6d664e5d1912cc9edfdd37bf1dad11ca396a0a8
+       bb062092d391ebf8790ea5722413f68"
+H_5 = "990824e00b48a68c3d9a308e8c52a57b1bc84d1cf5d3c0f8c6fb6b1230e4e5b8e
+       b752fb374da0b1ef687040024868140"
+H_6 = "b86d1c6ab8ce22bc53f625d1ce9796657f18060fcb1893ce8931156ef992fe568
+       56199f8fa6c998e5d855a354a26b0dd"
+H_7 = "b4cdd98c5c1e64cb324e0c57954f719d5c5f9e8d991fd8e159b31c8d079c76a67
+       321a30311975c706578d3a0ddc313b7"
+H_8 = "8311492d43ec9182a5fc44a75419b09547e311251fe38b6864dc1e706e29446cb
+       3ea4d501634eb13327245fd8a574f77"
+H_9 = "ac00b493f92d17837a28d1f5b07991ca5ab9f370ae40d4f9b9f2711749ca20011
+       0ce6517dc28400d4ea25dddc146cacc"
+H_10 = "965a6c62451d4be6cb175dec39727dc665762673ee42bf0ac13a37a74784fbd6
+        1e84e0915277a6f59863b2bb4f5f6005"
 
 7.3.4.  Signature Fixtures
 
 7.3.4.1.  Valid Single Message Signature
 
-   Using the following header
+m_1 = "9872ad089e452c7b6e283dfac2a80d58e8d0ff71cc4d5e310a1debdda4a45f02"
 
-   "11223344556677889900aabbccddeeff"
+SK = "2eee0f60a8a3a8bec0ee942bfd46cbdae9a0738ee68f5a64e7238311cf09a079"
+PK = "92d37d1d6cd38fea3a873953333eab23a4c0377e3e049974eb62bd45949cdeb18f
+      b0490edcd4429adff56e65cbce42cf188b31bddbd619e419b99c2c41b38179eb00
+      1963bc3decaae0d9f702c7a8c004f207f46c734a5eae2e8e82833f3e7ea5"
+header = "11223344556677889900aabbccddeeff"
 
-   And the following message (the first message defined in
-   Section 3.3.3)
+B = "8bbc8c123d3f128f206dd0d2dae490e82af08b84e8d70af3dc291d32a6e98f635be
+     efcc4533b2599804a164aabe68d7c"
+domain = "2f18dd269c11c512256a9d1d57e61a7d2de6ebcf41cac3053f37afedc4e650
+          a9"
 
-   "9872ad089e452c7b6e283dfac2a80d58e8d0ff71cc4d5e310a1debdda4a45f02"
-
-   Along with the SK value as defined in Section 7.3.1 as inputs into
-   the Sign operations, yields the following output signature
-
-"98eb37fceb31115bf647f2983aef578ad895e55f7451b1add02fa738224cb89a31b148e
-ace4d20d001be31d162c58d12574f30e68665b6403956a83b23a16f1daceacce8c5fde25
-d3defd52d6d5ff2e1"
+signature = "98eb37fceb31115bf647f2983aef578ad895e55f7451b1add02fa738224
+             cb89a31b148eace4d20d001be31d162c58d12574f30e68665b6403956a8
+             3b23a16f1daceacce8c5fde25d3defd52d6d5ff2e1"
 
 7.3.4.2.  Valid Multi-Message Signature
 
-   Using the following header
+m_1 = "9872ad089e452c7b6e283dfac2a80d58e8d0ff71cc4d5e310a1debdda4a45f02"
+m_2 = "c344136d9ab02da4dd5908bbba913ae6f58c2cc844b802a6f811f5fb075f9b80"
+m_3 = "7372e9daa5ed31e6cd5c825eac1b855e84476a1d94932aa348e07b73"
+m_4 = "77fe97eb97a1ebe2e81e4e3597a3ee740a66e9ef2412472c"
+m_5 = "496694774c5604ab1b2544eababcf0f53278ff50"
+m_6 = "515ae153e22aae04ad16f759e07237b4"
+m_7 = "d183ddc6e2665aa4e2f088af"
+m_8 = "ac55fb33a75909ed"
+m_9 = "96012096"
+m_10 = ""
 
-   "11223344556677889900aabbccddeeff"
+SK = "2eee0f60a8a3a8bec0ee942bfd46cbdae9a0738ee68f5a64e7238311cf09a079"
+PK = "92d37d1d6cd38fea3a873953333eab23a4c0377e3e049974eb62bd45949cdeb18f
+      b0490edcd4429adff56e65cbce42cf188b31bddbd619e419b99c2c41b38179eb00
+      1963bc3decaae0d9f702c7a8c004f207f46c734a5eae2e8e82833f3e7ea5"
+header = "11223344556677889900aabbccddeeff"
 
-   And the messages defined in Section 3.3.3 (*Note* the ordering of the
-   messages MUST be preserved), along with the SK value as defined in
-   Section 7.3.1 as inputs into the Sign operations, yields the
-   following output signature
+B = "ae8d4ebe248b9ad9c933d5661bfb46c56721fba2a1182ddda7e8fb443bda3c0a571
+     ad018ad31d0b6d1f4e8b985e6c58d"
+domain = "6f7ee8de30835599bb540d2cb4dd02fd0c6cf8246f14c9ee9a8463f7fd400f
+          7b"
 
-"97a296c83ed3626fe254d26021c5e9a087b580f1e8bc91bb51efb04420bfdaca215fe37
-6a0bc12440bcc52224fb33c696cca9239b9f28dcddb7bd850aae9cd1a9c3e9f3639953fe
-789dbba53b8f0dd6f"
+signature = "97a296c83ed3626fe254d26021c5e9a087b580f1e8bc91bb51efb04420b
+             fdaca215fe376a0bc12440bcc52224fb33c696cca9239b9f28dcddb7bd8
+             50aae9cd1a9c3e9f3639953fe789dbba53b8f0dd6f"
 
 7.3.5.  Proof Fixtures
 
@@ -2759,74 +2752,143 @@ SEED = "332e313431353932363533353839373933323338343632363433333833323739"
    Given the above seed the first 10 scalars returned by the
    mocked_calculate_random_scalars operation will be,
 
-   "1004262112c3eaa95941b2b0d1311c09c845db0099a50e67eda628ad26b43083"
-   "6da7f145a94c1fa7f116b2482d59e4d466fe49c955ae8726e79453065156a9a4"
-   "05017919b3607e78c51e8ec34329955d49c8c90e4488079c43e74824e98f1306"
-   "4d451dad519b6a226bba79e11b44c441f1a74800eecfec6a2e2d79ea65b9d32d"
-   "5e7e4894e6dbe68023bc92ef15c410b01f3828109fc72b3b5ab159fc427b3f51"
-   "646e3014f49accb375253d268eb6c7f3289a1510f1e9452b612dd73a06ec5dd4"
-   "363ecc4c1f9d6d9144374de8f1f7991405e3345a3ec49dd485a39982753c11a4"
-   "12e592fe28d91d7b92a198c29afaa9d5329a4dcfdaf8b08557807412faeb4ac6"
-   "513325acdcdec7ea572360587b350a8b095ca19bdd8258c5c69d375e8706141a"
-   "6474fceba35e7e17365dde1a0284170180e446ae96c82943290d7baa3a6ed429"
+rand_1 = "1004262112c3eaa95941b2b0d1311c09c845db0099a50e67eda628ad26b430
+          83"
+rand_2 = "6da7f145a94c1fa7f116b2482d59e4d466fe49c955ae8726e79453065156a9
+          a4"
+rand_3 = "05017919b3607e78c51e8ec34329955d49c8c90e4488079c43e74824e98f13
+          06"
+rand_4 = "4d451dad519b6a226bba79e11b44c441f1a74800eecfec6a2e2d79ea65b9d3
+          2d"
+rand_5 = "5e7e4894e6dbe68023bc92ef15c410b01f3828109fc72b3b5ab159fc427b3f
+          51"
+rand_6 = "646e3014f49accb375253d268eb6c7f3289a1510f1e9452b612dd73a06ec5d
+          d4"
+rand_7 = "363ecc4c1f9d6d9144374de8f1f7991405e3345a3ec49dd485a39982753c11
+          a4"
+rand_8 = "12e592fe28d91d7b92a198c29afaa9d5329a4dcfdaf8b08557807412faeb4a
+          c6"
+rand_9 = "513325acdcdec7ea572360587b350a8b095ca19bdd8258c5c69d375e870614
+          1a"
+rand_10 = "6474fceba35e7e17365dde1a0284170180e446ae96c82943290d7baa3a6ed
+           429"
 
 7.3.5.1.  Valid Single Message Proof
 
-   Using the header, message and signature used in Valid Single Message
-   Signature (#valid-single-message-signature) to create a proof
-   disclosing the message, with the following presentation header
+m_0 = "9872ad089e452c7b6e283dfac2a80d58e8d0ff71cc4d5e310a1debdda4a45f02"
 
-   "bed231d880675ed101ead304512e043ade9958dd0241ea70b4b3957fba941501"
+public_key = "92d37d1d6cd38fea3a873953333eab23a4c0377e3e049974eb62bd4594
+              9cdeb18fb0490edcd4429adff56e65cbce42cf188b31bddbd619e419b9
+              9c2c41b38179eb001963bc3decaae0d9f702c7a8c004f207f46c734a5e
+              ae2e8e82833f3e7ea5"
+signature = "98eb37fceb31115bf647f2983aef578ad895e55f7451b1add02fa738224
+             cb89a31b148eace4d20d001be31d162c58d12574f30e68665b6403956a8
+             3b23a16f1daceacce8c5fde25d3defd52d6d5ff2e1"
+header = "11223344556677889900aabbccddeeff"
+presentation_header = "bed231d880675ed101ead304512e043ade9958dd0241ea70b
+                       4b3957fba941501"
+revealed_indexes = [1]
 
-   will result to the following proof value
+T = "99651520e1a13b651d4bdedc492b3015cfb23a4781203e7b843605af724bb2cce02
+     07e2ba281379b4b8bcc806256b2ba"
+domain = "2f18dd269c11c512256a9d1d57e61a7d2de6ebcf41cac3053f37afedc4e650
+          a9"
+challenge = "7386c0c33ddaaebf7d046849428fc6cf4d08815fa39c94144c79ac50e86
+             a0f5d"
 
-"85c250f9a52faeb883ad9598aed05d31fe5861478d9f33b8de2deed1d92de5c0b0ef344
-58e6cf8bad8caa0724fd3d3ca854abee98db3384e81a406d976643e239df0a924576eaf8
-f4eec2885e9c688af7a52e4a752bef2c6f07d0a45611db3795d83d9cd71dfe8a62e3ad99
-2e6327413baaea14c1de798c8929f9c6b1524bab54d0494dd5354d5a0770b79d2911bb65
-91ce293e03a0d083bb81fc5bed8a44ff67386c0c33ddaaebf7d046849428fc6cf4d08815
-fa39c94144c79ac50e86a0f5d"
+proof = "85c250f9a52faeb883ad9598aed05d31fe5861478d9f33b8de2deed1d92de5c
+         0b0ef34458e6cf8bad8caa0724fd3d3ca854abee98db3384e81a406d976643e
+         239df0a924576eaf8f4eec2885e9c688af7a52e4a752bef2c6f07d0a45611db
+         3795d83d9cd71dfe8a62e3ad992e6327413baaea14c1de798c8929f9c6b1524
+         bab54d0494dd5354d5a0770b79d2911bb6591ce293e03a0d083bb81fc5bed8a
+         44ff67386c0c33ddaaebf7d046849428fc6cf4d08815fa39c94144c79ac50e8
+         6a0f5d"
 
 7.3.5.2.  Valid Multi-Message, All Messages Disclosed Proof
 
-   Using the header, messages and signature used in Valid Multi Message
-   Signature (#valid-multi-message-signature) to create a proof
-   disclosing all the messages, with the following presentation header
+m_1 = "9872ad089e452c7b6e283dfac2a80d58e8d0ff71cc4d5e310a1debdda4a45f02"
+m_2 = "c344136d9ab02da4dd5908bbba913ae6f58c2cc844b802a6f811f5fb075f9b80"
+m_3 = "7372e9daa5ed31e6cd5c825eac1b855e84476a1d94932aa348e07b73"
+m_4 = "77fe97eb97a1ebe2e81e4e3597a3ee740a66e9ef2412472c"
+m_5 = "496694774c5604ab1b2544eababcf0f53278ff50"
+m_6 = "515ae153e22aae04ad16f759e07237b4"
+m_7 = "d183ddc6e2665aa4e2f088af"
+m_8 = "ac55fb33a75909ed"
+m_9 = "96012096"
+m_10 = ""
 
-   "bed231d880675ed101ead304512e043ade9958dd0241ea70b4b3957fba941501"
+public_key = "92d37d1d6cd38fea3a873953333eab23a4c0377e3e049974eb62bd4594
+              9cdeb18fb0490edcd4429adff56e65cbce42cf188b31bddbd619e419b9
+              9c2c41b38179eb001963bc3decaae0d9f702c7a8c004f207f46c734a5e
+              ae2e8e82833f3e7ea5"
+signature = "97a296c83ed3626fe254d26021c5e9a087b580f1e8bc91bb51efb04420b
+             fdaca215fe376a0bc12440bcc52224fb33c696cca9239b9f28dcddb7bd8
+             50aae9cd1a9c3e9f3639953fe789dbba53b8f0dd6f"
+header = "11223344556677889900aabbccddeeff"
+presentation_header = "bed231d880675ed101ead304512e043ade9958dd0241ea70b
+                       4b3957fba941501"
+revealed_indexes = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 
-   will result to the following proof value
+T = "a473c0e5c6535f52d35960b60cc1c119ac691d722de43b21db307a8a24c959eb51a
+     34e1348f306f6238beb2cf27dbddf"
+domain = "6f7ee8de30835599bb540d2cb4dd02fd0c6cf8246f14c9ee9a8463f7fd400f
+          7b"
+challenge = "1537982406ba09ff6a1c6dee258fd22b3f9aa1f28e19a83bbd1141f2417
+             1f380"
 
-"94dfa4e26276f0ccf319b0ade65317e0bac41867aaebc73c7edc38673776cc6321dadd7
-21920f5bd33f14be6dd101ec0b48f82f7ce8a8eb1d7cba2b93b66206bb7c3b5340e358be
-39380c7a9f17083fa1bcdf9c4e5ba5927edfd01519189b7b33fa2b5bbb5baf963598694e
-9f9c0c12e7aee29395e61a16129b43edaef245d5732bbc6e2e626ce241b8fdc60aea5532
-f829ace9ed443a679b3e6ffd712ce67681537982406ba09ff6a1c6dee258fd22b3f9aa1f
-28e19a83bbd1141f24171f380"
+proof = "94dfa4e26276f0ccf319b0ade65317e0bac41867aaebc73c7edc38673776cc6
+         321dadd721920f5bd33f14be6dd101ec0b48f82f7ce8a8eb1d7cba2b93b6620
+         6bb7c3b5340e358be39380c7a9f17083fa1bcdf9c4e5ba5927edfd01519189b
+         7b33fa2b5bbb5baf963598694e9f9c0c12e7aee29395e61a16129b43edaef24
+         5d5732bbc6e2e626ce241b8fdc60aea5532f829ace9ed443a679b3e6ffd712c
+         e67681537982406ba09ff6a1c6dee258fd22b3f9aa1f28e19a83bbd1141f241
+         71f380"
 
-7.3.5.3.  Valid Multi-Message, Half of Messages Disclosed Proof
+7.3.5.3.  Valid Multi-Message, Some Messages Disclosed Proof
 
-   Using the same header, messages and signature as in Multi-Message,
-   All Messages Disclosed Proof (#valid-multi-message-all-messages-
-   disclosed-proof) but this time with only every other messages
-   disclosed (messages in index 0, 2, 4 and 6, in that order), with the
-   following presentation header
+m_1 = "9872ad089e452c7b6e283dfac2a80d58e8d0ff71cc4d5e310a1debdda4a45f02"
+m_2 = "c344136d9ab02da4dd5908bbba913ae6f58c2cc844b802a6f811f5fb075f9b80"
+m_3 = "7372e9daa5ed31e6cd5c825eac1b855e84476a1d94932aa348e07b73"
+m_4 = "77fe97eb97a1ebe2e81e4e3597a3ee740a66e9ef2412472c"
+m_5 = "496694774c5604ab1b2544eababcf0f53278ff50"
+m_6 = "515ae153e22aae04ad16f759e07237b4"
+m_7 = "d183ddc6e2665aa4e2f088af"
+m_8 = "ac55fb33a75909ed"
+m_9 = "96012096"
+m_10 = ""
 
-   "bed231d880675ed101ead304512e043ade9958dd0241ea70b4b3957fba941501"
+public_key = "92d37d1d6cd38fea3a873953333eab23a4c0377e3e049974eb62bd4594
+              9cdeb18fb0490edcd4429adff56e65cbce42cf188b31bddbd619e419b9
+              9c2c41b38179eb001963bc3decaae0d9f702c7a8c004f207f46c734a5e
+              ae2e8e82833f3e7ea5"
+signature = "97a296c83ed3626fe254d26021c5e9a087b580f1e8bc91bb51efb04420b
+             fdaca215fe376a0bc12440bcc52224fb33c696cca9239b9f28dcddb7bd8
+             50aae9cd1a9c3e9f3639953fe789dbba53b8f0dd6f"
+header = "11223344556677889900aabbccddeeff"
+presentation_header = "bed231d880675ed101ead304512e043ade9958dd0241ea70b
+                       4b3957fba941501"
+revealed_indexes = [1, 3, 5, 7]
 
-   will result to the following proof value
+T = "89f37630b485590b80f54c96210a00139366785701a99de2a5b560b7304b16ff20f
+     81edb2027de2ed6bd58206a6aa2d3"
+domain = "6f7ee8de30835599bb540d2cb4dd02fd0c6cf8246f14c9ee9a8463f7fd400f
+          7b"
+challenge = "3f079b3ede1b244a809807ae2088deff841b93d0bca442e346b33d6b8af
+             f8961"
 
-"ac0424b2a984c55d0061aa61df105f2c882d393494f3f4205d1e73f93c9c76b30664bae
-b3dc87f23fbf4035fb0a8e76b851dd39cecce8843e747ccf540f0850a30e1317f8897a56
-c2d85bfc1e0b4dba1b0e0322d89aad4feb8b21c414a384a0128d65da028243bdab954c1d
-6b4f3874ccafe69bb0900c0b8528d56dd9bd1d78b0c328022210ff9fe95276f79d232789
-56a0898d974932bd90e6c79f7e970de6b637c7e6326540699080d39bd076a50095e031e9
-80e68068e3e34a982ff4678c656db3c3b49df591ade6db848d7c2ddadf7e7d1db858848a
-948f858f7fd59068c6b816607e5abd4f039bf2d1904fd7f89a1917023a1fc4862dbe8848
-041da2e36271d76ad8b5e357ea3fd71ebc3617427a064256febf122773528023e4df1d25
-900dc1ab19a563587c74a82495c59115263c51dcea106baa5f7f82c0b50e7756370f0470
-cb4630d2a188309f28e1e0582c47a9ec76f864363835812984432a5253f079b3ede1b244
-a809807ae2088deff841b93d0bca442e346b33d6b8aff8961"
+proof = "ac0424b2a984c55d0061aa61df105f2c882d393494f3f4205d1e73f93c9c76b
+         30664baeb3dc87f23fbf4035fb0a8e76b851dd39cecce8843e747ccf540f085
+         0a30e1317f8897a56c2d85bfc1e0b4dba1b0e0322d89aad4feb8b21c414a384
+         a0128d65da028243bdab954c1d6b4f3874ccafe69bb0900c0b8528d56dd9bd1
+         d78b0c328022210ff9fe95276f79d23278956a0898d974932bd90e6c79f7e97
+         0de6b637c7e6326540699080d39bd076a50095e031e980e68068e3e34a982ff
+         4678c656db3c3b49df591ade6db848d7c2ddadf7e7d1db858848a948f858f7f
+         d59068c6b816607e5abd4f039bf2d1904fd7f89a1917023a1fc4862dbe88480
+         41da2e36271d76ad8b5e357ea3fd71ebc3617427a064256febf122773528023
+         e4df1d25900dc1ab19a563587c74a82495c59115263c51dcea106baa5f7f82c
+         0b50e7756370f0470cb4630d2a188309f28e1e0582c47a9ec76f86436383581
+         2984432a5253f079b3ede1b244a809807ae2088deff841b93d0bca442e346b3
+         3d6b8aff8961"
 
 7.4.  BLS12381-SHA-256 Test Vectors
 
@@ -2837,30 +2899,27 @@ a809807ae2088deff841b93d0bca442e346b33d6b8aff8961"
 
 7.4.1.  Key Pair
 
-   The following key pair will be used for the test vectors of the
-   BLS12-381-SHA-256 (#bls12-381-sha-256-ciphersuite) ciphersuite.
-
    Following the procedure defined in Section 3.4.1 with an input
    key_material value as follows
 
-"746869732d49532d6a7573742d616e2d546573742d494b4d2d746f2d67656e657261746
-52d246528724074232d6b6579"
+key_material = "746869732d49532d6a7573742d616e2d546573742d494b4d2d746f2d
+                67656e65726174652d246528724074232d6b6579"
 
    and the following key_info value
 
-"746869732d49532d736f6d652d6b65792d6d657461646174612d746f2d62652d7573656
-42d696e2d746573742d6b65792d67656e"
+key_info = "746869732d49532d736f6d652d6b65792d6d657461646174612d746f2d62
+            652d757365642d696e2d746573742d6b65792d67656e"
 
    Outputs the following SK value
 
-   "60e55110f76883a13d030b2f6bd11883422d5abde717569fc0731f51237169fc"
+ SK = "60e55110f76883a13d030b2f6bd11883422d5abde717569fc0731f51237169fc"
 
    Following the procedure defined in Section 3.4.2 with an input SK
    value as above produces the following PK value
 
-"a820f230f6ae38503b86c70dc50b61c58a77e45c39ab25c0652bbaa8fa136f2851bd478
-1c9dcde39fc9d1d52c9e60268061e7d7632171d91aa8d460acee0e96f1e7c4cfb12d3ff9
-ab5d5dc91c277db75c845d649ef3c4f63aebc364cd55ded0c"
+PK = "a820f230f6ae38503b86c70dc50b61c58a77e45c39ab25c0652bbaa8fa136f2851
+      bd4781c9dcde39fc9d1d52c9e60268061e7d7632171d91aa8d460acee0e96f1e7c
+      4cfb12d3ff9ab5d5dc91c277db75c845d649ef3c4f63aebc364cd55ded0c"
 
 7.4.2.  Map Messages to Scalars
 
@@ -2870,31 +2929,33 @@ ab5d5dc91c277db75c845d649ef3c4f63aebc364cd55ded0c"
    (Section 4.1.2).  Each output scalar value is encoded to octets using
    I2OSP and represented in big endian order,
 
-"4242535f424c53313233383147315f584d443a5348412d3235365f535357555f524f5f4
-832475f484d32535f4d41505f4d53475f544f5f5343414c41525f41535f484153485f"
+dst = "4242535f424c53313233383147315f584d443a5348412d3235365f535357555f5
+       24f5f4832475f484d32535f4d41505f4d53475f544f5f5343414c41525f41535f
+       484153485f"
 
    The output scalars, encoded to octets using I2OSP and represented in
    big endian order, are the following,
 
-   "1cb5bb86114b34dc438a911617655a1db595abafac92f47c5001799cf624b430"
-
-   "154249d503c093ac2df516d4bb88b510d54fd97e8d7121aede420a25d9521952"
-
-   "0c7c4c85cdab32e6fdb0de267b16fa3212733d4e3a3f0d0f751657578b26fe22"
-
-   "4a196deafee5c23f630156ae13be3e46e53b7e39094d22877b8cba7f14640888"
-
-   "34c5ea4f2ba49117015a02c711bb173c11b06b3f1571b88a2952b93d0ed4cf7e"
-
-   "4045b39b83055cd57a4d0203e1660800fabe434004dbdc8730c21ce3f0048b08"
-
-   "064621da4377b6b1d05ecc37cf3b9dfc94b9498d7013dc5c4a82bf3bb1750743"
-
-   "34ac9196ace0a37e147e32319ea9b3d8cc7d21870d3c3ba071246859cca49b02"
-
-   "57eb93f417c43200e9784fa5ea5a59168d3dbc38df707a13bb597c871b2a5f74"
-
-   "08e3afeb2b4f2b5f907924ef42856616e6f2d5f1fb373736db1cca32707a7d16"
+msg_scalar_1 = "1cb5bb86114b34dc438a911617655a1db595abafac92f47c5001799c
+                f624b430"
+msg_scalar_2 = "154249d503c093ac2df516d4bb88b510d54fd97e8d7121aede420a25
+                d9521952"
+msg_scalar_3 = "0c7c4c85cdab32e6fdb0de267b16fa3212733d4e3a3f0d0f75165757
+                8b26fe22"
+msg_scalar_4 = "4a196deafee5c23f630156ae13be3e46e53b7e39094d22877b8cba7f
+                14640888"
+msg_scalar_5 = "34c5ea4f2ba49117015a02c711bb173c11b06b3f1571b88a2952b93d
+                0ed4cf7e"
+msg_scalar_6 = "4045b39b83055cd57a4d0203e1660800fabe434004dbdc8730c21ce3
+                f0048b08"
+msg_scalar_7 = "064621da4377b6b1d05ecc37cf3b9dfc94b9498d7013dc5c4a82bf3b
+                b1750743"
+msg_scalar_8 = "34ac9196ace0a37e147e32319ea9b3d8cc7d21870d3c3ba071246859
+                cca49b02"
+msg_scalar_9 = "57eb93f417c43200e9784fa5ea5a59168d3dbc38df707a13bb597c87
+                1b2a5f74"
+msg_scalar_10 = "08e3afeb2b4f2b5f907924ef42856616e6f2d5f1fb373736db1cca3
+                 2707a7d16"
 
 7.4.3.  Message Generators
 
@@ -2903,73 +2964,77 @@ ab5d5dc91c277db75c845d649ef3c4f63aebc364cd55ded0c"
    outputs the following values (note that the first one corresponds to
    Q_1, while the next 10, to the message generators H_1, ..., H_10).
 
-"a9ec65b70a7fbe40c874c9eb041c2cb0a7af36ccec1bea48fa2ba4c2eb67ef7f9ecb17e
-d27d38d27cdeddff44c8137be"
-
-"98cd5313283aaf5db1b3ba8611fe6070d19e605de4078c38df36019fbaad0bd28dd090f
-d24ed27f7f4d22d5ff5dea7d4"
-
-"a31fbe20c5c135bcaa8d9fc4e4ac665cc6db0226f35e737507e803044093f37697a9d45
-2490a970eea6f9ad6c3dcaa3a"
-
-"b479263445f4d2108965a9086f9d1fdc8cde77d14a91c856769521ad3344754cc5ce90d
-9bc4c696dffbc9ef1d6ad1b62"
-
-"ac0401766d2128d4791d922557c7b4d1ae9a9b508ce266575244a8d6f32110d7b0b7557
-b77604869633bb49afbe20035"
-
-"b95d2898370ebc542857746a316ce32fa5151c31f9b57915e308ee9d1de7db69127d919
-e984ea0747f5223821b596335"
-
-"8f19359ae6ee508157492c06765b7df09e2e5ad591115742f2de9c08572bb2845cbf03f
-d7e23b7f031ed9c7564e52f39"
-
-"abc914abe2926324b2c848e8a411a2b6df18cbe7758db8644145fefb0bf0a2d558a8c99
-46bd35e00c69d167aadf304c1"
-
-"80755b3eb0dd4249cbefd20f177cee88e0761c066b71794825c9997b551f24051c35256
-7ba6c01e57ac75dff763eaa17"
-
-"82701eb98070728e1769525e73abff1783cedc364adb20c05c897a62f2ab2927f86f118
-dcb7819a7b218d8f3fee4bd7f"
-
-"a1f229540474f4d6f1134761b92b788128c7ac8dc9b0c52d59493132679673032ac7db3
-fb3d79b46b13c1c41ee495bca"
+Q_1 = "a9ec65b70a7fbe40c874c9eb041c2cb0a7af36ccec1bea48fa2ba4c2eb67ef7f9
+       ecb17ed27d38d27cdeddff44c8137be"
+H_1 = "98cd5313283aaf5db1b3ba8611fe6070d19e605de4078c38df36019fbaad0bd28
+       dd090fd24ed27f7f4d22d5ff5dea7d4"
+H_2 = "a31fbe20c5c135bcaa8d9fc4e4ac665cc6db0226f35e737507e803044093f3769
+       7a9d452490a970eea6f9ad6c3dcaa3a"
+H_3 = "b479263445f4d2108965a9086f9d1fdc8cde77d14a91c856769521ad3344754cc
+       5ce90d9bc4c696dffbc9ef1d6ad1b62"
+H_4 = "ac0401766d2128d4791d922557c7b4d1ae9a9b508ce266575244a8d6f32110d7b
+       0b7557b77604869633bb49afbe20035"
+H_5 = "b95d2898370ebc542857746a316ce32fa5151c31f9b57915e308ee9d1de7db691
+       27d919e984ea0747f5223821b596335"
+H_6 = "8f19359ae6ee508157492c06765b7df09e2e5ad591115742f2de9c08572bb2845
+       cbf03fd7e23b7f031ed9c7564e52f39"
+H_7 = "abc914abe2926324b2c848e8a411a2b6df18cbe7758db8644145fefb0bf0a2d55
+       8a8c9946bd35e00c69d167aadf304c1"
+H_8 = "80755b3eb0dd4249cbefd20f177cee88e0761c066b71794825c9997b551f24051
+       c352567ba6c01e57ac75dff763eaa17"
+H_9 = "82701eb98070728e1769525e73abff1783cedc364adb20c05c897a62f2ab2927f
+       86f118dcb7819a7b218d8f3fee4bd7f"
+H_10 = "a1f229540474f4d6f1134761b92b788128c7ac8dc9b0c52d5949313267967303
+        2ac7db3fb3d79b46b13c1c41ee495bca"
 
 7.4.4.  Signature Fixtures
 
 7.4.4.1.  Valid Single Message Signature
 
-   Using the following header
+m_1 = "9872ad089e452c7b6e283dfac2a80d58e8d0ff71cc4d5e310a1debdda4a45f02"
 
-   "11223344556677889900aabbccddeeff"
+SK = "60e55110f76883a13d030b2f6bd11883422d5abde717569fc0731f51237169fc"
+PK = "a820f230f6ae38503b86c70dc50b61c58a77e45c39ab25c0652bbaa8fa136f2851
+      bd4781c9dcde39fc9d1d52c9e60268061e7d7632171d91aa8d460acee0e96f1e7c
+      4cfb12d3ff9ab5d5dc91c277db75c845d649ef3c4f63aebc364cd55ded0c"
+header = "11223344556677889900aabbccddeeff"
 
-   And the following message (the first message defined in
-   Section 3.3.3)
+B = "92d264aed02bf23de022ebe778c4f929fddf829f504e451d011ed89a313b8167ac9
+     47332e1648157ceffc6e6e41ab255"
+domain = "25d57fab92a8274c68fde5c3f16d4b275e4a156f211ae34b3ab32fbaf506ed
+          5c"
 
-   "9872ad089e452c7b6e283dfac2a80d58e8d0ff71cc4d5e310a1debdda4a45f02"
-
-   Along with the SK value as defined in Section 7.3.1 as inputs into
-   the Sign operations, yields the following output signature
-
-"88c0eb3bc1d97610c3a66d8a3a73f260f95a3028bccf7fff7d9851e2acd9f3f32fdf58a
-5b34d12df8177adf37aa318a20f72be7d37a8e8d8441d1bc0bc75543c681bf061ce7e7f6
-091fe78c1cb8af103"
+signature = "88c0eb3bc1d97610c3a66d8a3a73f260f95a3028bccf7fff7d9851e2acd
+             9f3f32fdf58a5b34d12df8177adf37aa318a20f72be7d37a8e8d8441d1b
+             c0bc75543c681bf061ce7e7f6091fe78c1cb8af103"
 
 7.4.4.2.  Valid Multi-Message Signature
 
-   Using the following header
+m_1 = "9872ad089e452c7b6e283dfac2a80d58e8d0ff71cc4d5e310a1debdda4a45f02"
+m_2 = "c344136d9ab02da4dd5908bbba913ae6f58c2cc844b802a6f811f5fb075f9b80"
+m_3 = "7372e9daa5ed31e6cd5c825eac1b855e84476a1d94932aa348e07b73"
+m_4 = "77fe97eb97a1ebe2e81e4e3597a3ee740a66e9ef2412472c"
+m_5 = "496694774c5604ab1b2544eababcf0f53278ff50"
+m_6 = "515ae153e22aae04ad16f759e07237b4"
+m_7 = "d183ddc6e2665aa4e2f088af"
+m_8 = "ac55fb33a75909ed"
+m_9 = "96012096"
+m_10 = ""
 
-   "11223344556677889900aabbccddeeff"
+SK = "60e55110f76883a13d030b2f6bd11883422d5abde717569fc0731f51237169fc"
+PK = "a820f230f6ae38503b86c70dc50b61c58a77e45c39ab25c0652bbaa8fa136f2851
+      bd4781c9dcde39fc9d1d52c9e60268061e7d7632171d91aa8d460acee0e96f1e7c
+      4cfb12d3ff9ab5d5dc91c277db75c845d649ef3c4f63aebc364cd55ded0c"
+header = "11223344556677889900aabbccddeeff"
 
-   And the messages defined in Section 3.3.3 (*Note* the ordering of the
-   messages MUST be preserved), along with the SK value as defined in
-   Section 7.3.1 as inputs into the Sign operations, yields the
-   following output signature
+B = "84f48376f7df6af40bc329cf484cdbfd0b19d0b326fccab4e9d8f00d1dbcf48139d
+     498b19667f203cf8a1d1f8340c522"
+domain = "6272832582a0ac96e6fe53e879422f24c51680b25fbf17bad22a35ea93ce5b
+          47"
 
-"895cd9c0ccb9aca4de913218655346d718711472f2bf1f3e68916de106a0d93cf2f4720
-0819b45920bbda541db2d91480665df253fedab2843055bdc02535d83baddbbb2803ec38
-08e074f71f199751e"
+signature = "895cd9c0ccb9aca4de913218655346d718711472f2bf1f3e68916de106a
+             0d93cf2f47200819b45920bbda541db2d91480665df253fedab2843055b
+             dc02535d83baddbbb2803ec3808e074f71f199751e"
 
 7.4.5.  Proof Fixtures
 
@@ -2985,74 +3050,143 @@ SEED = "332e313431353932363533353839373933323338343632363433333833323739"
    Given the above seed the first 10 scalars returned by the
    mocked_calculate_random_scalars operation will be,
 
-   "04f8e2518993c4383957ad14eb13a023c4ad0c67d01ec86eeb902e732ed6df3f"
-   "5d87c1ba64c320ad601d227a1b74188a41a100325cecf00223729863966392b1"
-   "0444607600ac70482e9c983b4b063214080b9e808300aa4cc02a91b3a92858fe"
-   "548cd11eae4318e88cda10b4cd31ae29d41c3a0b057196ee9cf3a69d471e4e94"
-   "2264b06a08638b69b4627756a62f08e0dc4d8240c1b974c9c7db779a769892f4"
-   "4d99352986a9f8978b93485d21525244b21b396cf61f1d71f7c48e3fbc970a42"
-   "5ed8be91662386243a6771fbdd2c627de31a44220e8d6f745bad5d99821a4880"
-   "62ff1734b939ddd87beeb37a7bbcafa0a274cbc1b07384198f0e88398272208d"
-   "05c2a0af016df58e844db8944082dcaf434de1b1e2e7136ec8a99b939b716223"
-   "485e2adab17b76f5334c95bf36c03ccf91cef77dcfcdc6b8a69e2090b3156663"
+rand_1 = "04f8e2518993c4383957ad14eb13a023c4ad0c67d01ec86eeb902e732ed6df
+          3f"
+rand_2 = "5d87c1ba64c320ad601d227a1b74188a41a100325cecf00223729863966392
+          b1"
+rand_3 = "0444607600ac70482e9c983b4b063214080b9e808300aa4cc02a91b3a92858
+          fe"
+rand_4 = "548cd11eae4318e88cda10b4cd31ae29d41c3a0b057196ee9cf3a69d471e4e
+          94"
+rand_5 = "2264b06a08638b69b4627756a62f08e0dc4d8240c1b974c9c7db779a769892
+          f4"
+rand_6 = "4d99352986a9f8978b93485d21525244b21b396cf61f1d71f7c48e3fbc970a
+          42"
+rand_7 = "5ed8be91662386243a6771fbdd2c627de31a44220e8d6f745bad5d99821a48
+          80"
+rand_8 = "62ff1734b939ddd87beeb37a7bbcafa0a274cbc1b07384198f0e8839827220
+          8d"
+rand_9 = "05c2a0af016df58e844db8944082dcaf434de1b1e2e7136ec8a99b939b7162
+          23"
+rand_10 = "485e2adab17b76f5334c95bf36c03ccf91cef77dcfcdc6b8a69e2090b3156
+           663"
 
 7.4.5.1.  Valid Single Message Proof
 
-   Using the header, message and signature used in Valid Single Message
-   Signature (#valid-single-message-signature-1) to create a proof
-   disclosing the message, with the following presentation header
+m_0 = "9872ad089e452c7b6e283dfac2a80d58e8d0ff71cc4d5e310a1debdda4a45f02"
 
-   "bed231d880675ed101ead304512e043ade9958dd0241ea70b4b3957fba941501"
+public_key = "a820f230f6ae38503b86c70dc50b61c58a77e45c39ab25c0652bbaa8fa
+              136f2851bd4781c9dcde39fc9d1d52c9e60268061e7d7632171d91aa8d
+              460acee0e96f1e7c4cfb12d3ff9ab5d5dc91c277db75c845d649ef3c4f
+              63aebc364cd55ded0c"
+signature = "88c0eb3bc1d97610c3a66d8a3a73f260f95a3028bccf7fff7d9851e2acd
+             9f3f32fdf58a5b34d12df8177adf37aa318a20f72be7d37a8e8d8441d1b
+             c0bc75543c681bf061ce7e7f6091fe78c1cb8af103"
+header = "11223344556677889900aabbccddeeff"
+presentation_header = "bed231d880675ed101ead304512e043ade9958dd0241ea70b
+                       4b3957fba941501"
+revealed_indexes = [1]
 
-   will result to the following proof value
+T = "a7859db7e985ab65b9aa182b4e8598e4fcb3685ad161a5d3b6ab7da40968bd5c288
+     9acedae5e4d768d1e88bcd6f25f59"
+domain = "25d57fab92a8274c68fde5c3f16d4b275e4a156f211ae34b3ab32fbaf506ed
+          5c"
+challenge = "27d5601b2193b697a576fd9bd896c25a75004f6604a98707741916769c4
+             9175f"
 
-"8e9bc91d68151e4b105ec0d46ca95fe1526672bed27b26541a648ec990b3b11b8905e67
-1fb981f1b9cd1ed64167a7ba18b7697d9bd6f3cac02f75551f2db95bf2707e3790c10d81
-5346a96198327cc7048f220bdc7d6fc5ec41c6d9f89d607ff6ef2eef19447b3e34a14660
-eedb8b4f6189f202a4fef22e60dd23041e2761a9f18701019b520ed3ccf07a298e349222
-ab059e7ebd84c65e3a2127ec42f5f357c27d5601b2193b697a576fd9bd896c25a75004f6
-604a98707741916769c49175f"
+proof = "8e9bc91d68151e4b105ec0d46ca95fe1526672bed27b26541a648ec990b3b11
+         b8905e671fb981f1b9cd1ed64167a7ba18b7697d9bd6f3cac02f75551f2db95
+         bf2707e3790c10d815346a96198327cc7048f220bdc7d6fc5ec41c6d9f89d60
+         7ff6ef2eef19447b3e34a14660eedb8b4f6189f202a4fef22e60dd23041e276
+         1a9f18701019b520ed3ccf07a298e349222ab059e7ebd84c65e3a2127ec42f5
+         f357c27d5601b2193b697a576fd9bd896c25a75004f6604a98707741916769c
+         49175f"
 
 7.4.5.2.  Valid Multi-Message, All Messages Disclosed Proof
 
-   Using the header, messages and signature used in Valid Multi Message
-   Signature (#valid-multi-message-signature-1) to create a proof
-   disclosing all the messages, with the following presentation header
+m_1 = "9872ad089e452c7b6e283dfac2a80d58e8d0ff71cc4d5e310a1debdda4a45f02"
+m_2 = "c344136d9ab02da4dd5908bbba913ae6f58c2cc844b802a6f811f5fb075f9b80"
+m_3 = "7372e9daa5ed31e6cd5c825eac1b855e84476a1d94932aa348e07b73"
+m_4 = "77fe97eb97a1ebe2e81e4e3597a3ee740a66e9ef2412472c"
+m_5 = "496694774c5604ab1b2544eababcf0f53278ff50"
+m_6 = "515ae153e22aae04ad16f759e07237b4"
+m_7 = "d183ddc6e2665aa4e2f088af"
+m_8 = "ac55fb33a75909ed"
+m_9 = "96012096"
+m_10 = ""
 
-   "bed231d880675ed101ead304512e043ade9958dd0241ea70b4b3957fba941501"
+public_key = "a820f230f6ae38503b86c70dc50b61c58a77e45c39ab25c0652bbaa8fa
+              136f2851bd4781c9dcde39fc9d1d52c9e60268061e7d7632171d91aa8d
+              460acee0e96f1e7c4cfb12d3ff9ab5d5dc91c277db75c845d649ef3c4f
+              63aebc364cd55ded0c"
+signature = "895cd9c0ccb9aca4de913218655346d718711472f2bf1f3e68916de106a
+             0d93cf2f47200819b45920bbda541db2d91480665df253fedab2843055b
+             dc02535d83baddbbb2803ec3808e074f71f199751e"
+header = "11223344556677889900aabbccddeeff"
+presentation_header = "bed231d880675ed101ead304512e043ade9958dd0241ea70b
+                       4b3957fba941501"
+revealed_indexes = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 
-   will result to the following proof value
+T = "b100d50c4cbd8ca0f2130e20e18df218a75122bd9233cccef460da0e4173d563b06
+     4dae7df5f435b6130cfdebc40c42e"
+domain = "6272832582a0ac96e6fe53e879422f24c51680b25fbf17bad22a35ea93ce5b
+          47"
+challenge = "58a6e7ae4982ae797890d5d0b574fa73a7ae7023d4dd9f8a9b3a11f2082
+             56d7c"
 
-"89910f223320044fe6342b8dabfeac786f35cc98bb64c95ecb39348281d5a8c84e97558
-1b5f37ec45c8bc4cda486d5e2a20e007d0dd0fba77f846dfe3458fc01ff94a49c0585506
-84638e1b88b61e8d69a1453652477af005d42cdb2d57e86b03a2cf88bc0bac5a3d12a1c0
-717b9ea8d42ecdb746f522edfc15910574b289faa0438d6516504a7a66ce180b2271101d
-87519cad823f03f266f66649b388e680a58a6e7ae4982ae797890d5d0b574fa73a7ae702
-3d4dd9f8a9b3a11f208256d7c"
+proof = "89910f223320044fe6342b8dabfeac786f35cc98bb64c95ecb39348281d5a8c
+         84e975581b5f37ec45c8bc4cda486d5e2a20e007d0dd0fba77f846dfe3458fc
+         01ff94a49c058550684638e1b88b61e8d69a1453652477af005d42cdb2d57e8
+         6b03a2cf88bc0bac5a3d12a1c0717b9ea8d42ecdb746f522edfc15910574b28
+         9faa0438d6516504a7a66ce180b2271101d87519cad823f03f266f66649b388
+         e680a58a6e7ae4982ae797890d5d0b574fa73a7ae7023d4dd9f8a9b3a11f208
+         256d7c"
 
-7.4.5.3.  Valid Multi-Message, Half of Messages Disclosed Proof
+7.4.5.3.  Valid Multi-Message, Some Messages Disclosed Proof
 
-   Using the same header, messages and signature as in Multi-Message,
-   All Messages Disclosed Proof (#valid-multi-message-all-messages-
-   disclosed-proof-1) but this time with only every other messages
-   disclosed (messages in index 0, 2, 4 and 6, in that order), with the
-   following presentation header
+m_1 = "9872ad089e452c7b6e283dfac2a80d58e8d0ff71cc4d5e310a1debdda4a45f02"
+m_2 = "c344136d9ab02da4dd5908bbba913ae6f58c2cc844b802a6f811f5fb075f9b80"
+m_3 = "7372e9daa5ed31e6cd5c825eac1b855e84476a1d94932aa348e07b73"
+m_4 = "77fe97eb97a1ebe2e81e4e3597a3ee740a66e9ef2412472c"
+m_5 = "496694774c5604ab1b2544eababcf0f53278ff50"
+m_6 = "515ae153e22aae04ad16f759e07237b4"
+m_7 = "d183ddc6e2665aa4e2f088af"
+m_8 = "ac55fb33a75909ed"
+m_9 = "96012096"
+m_10 = ""
 
-   "bed231d880675ed101ead304512e043ade9958dd0241ea70b4b3957fba941501"
+public_key = "a820f230f6ae38503b86c70dc50b61c58a77e45c39ab25c0652bbaa8fa
+              136f2851bd4781c9dcde39fc9d1d52c9e60268061e7d7632171d91aa8d
+              460acee0e96f1e7c4cfb12d3ff9ab5d5dc91c277db75c845d649ef3c4f
+              63aebc364cd55ded0c"
+signature = "895cd9c0ccb9aca4de913218655346d718711472f2bf1f3e68916de106a
+             0d93cf2f47200819b45920bbda541db2d91480665df253fedab2843055b
+             dc02535d83baddbbb2803ec3808e074f71f199751e"
+header = "11223344556677889900aabbccddeeff"
+presentation_header = "bed231d880675ed101ead304512e043ade9958dd0241ea70b
+                       4b3957fba941501"
+revealed_indexes = [1, 3, 5, 7]
 
-   will result to the following proof value
+T = "822cd8bc6b68ac133fd5eccbef1ce1bbbc01a7ca825287c11a2d239d26f814f1477
+     3047607ba655bf4d6882a4ae1dab0"
+domain = "6272832582a0ac96e6fe53e879422f24c51680b25fbf17bad22a35ea93ce5b
+          47"
+challenge = "1767c467fdd882eb038492a390ee5d0c0f72f50f2ac5cedb705fc465f7b
+             c093b"
 
-"812a204f66c9084feed7383894d910f2c17399b3c4b4bed05660921de8539f5042318c3
-56609496a6ca0a26626661be78ca723b7182ccd314924b93a3997654fcd77e29e3847dc8
-81f422a751017705173ec094d2997221e134710d4fff1bd33111a4b4fc79a2201d18b5cc
-63fab1252def0d4f020129c7e022f56f505aa977a7240da430bc60a2d4d17897b4222805
-4a2fb4f780fb710268ebea24c9fb0e15e2ac415b99a232b13bfd215af3fb35f5518953ea
-ccc200555eaa69ae434eb623f0a83bb57a8a8e70ba37761ffaeb756d9115c1177ce929f0
-4be23b5636120c7ac0a73546f177a3c3be2d233b3253f31c3468260723c1afa2d0febd38
-161e16ed0147369bda8b05ec3f6183239c6ecb9fb54b0989160e8cdf8b9f0cf4a46a2150
-232d96c466fad2d60ff067492c52cc6af1d16e62364ed6d3dc19feaf1fcf9c12750301c2
-de6541c0edce5ede7425f75e01fd94a7e6137ebf23460bf3f1afec9f21767c467fdd882e
-b038492a390ee5d0c0f72f50f2ac5cedb705fc465f7bc093b"
+proof = "812a204f66c9084feed7383894d910f2c17399b3c4b4bed05660921de8539f5
+         042318c356609496a6ca0a26626661be78ca723b7182ccd314924b93a399765
+         4fcd77e29e3847dc881f422a751017705173ec094d2997221e134710d4fff1b
+         d33111a4b4fc79a2201d18b5cc63fab1252def0d4f020129c7e022f56f505aa
+         977a7240da430bc60a2d4d17897b42228054a2fb4f780fb710268ebea24c9fb
+         0e15e2ac415b99a232b13bfd215af3fb35f5518953eaccc200555eaa69ae434
+         eb623f0a83bb57a8a8e70ba37761ffaeb756d9115c1177ce929f04be23b5636
+         120c7ac0a73546f177a3c3be2d233b3253f31c3468260723c1afa2d0febd381
+         61e16ed0147369bda8b05ec3f6183239c6ecb9fb54b0989160e8cdf8b9f0cf4
+         a46a2150232d96c466fad2d60ff067492c52cc6af1d16e62364ed6d3dc19fea
+         f1fcf9c12750301c2de6541c0edce5ede7425f75e01fd94a7e6137ebf23460b
+         f3f1afec9f21767c467fdd882eb038492a390ee5d0c0f72f50f2ac5cedb705f
+         c465f7bc093b"
 
 8.  IANA Considerations
 
@@ -3344,219 +3478,294 @@ C.1.1.  Signature Test Vectors
 
 C.1.1.1.  No Header Valid Signature
 
-   Using the messages defined in Section 3.3.3, with no header, along
-   with the SK and PK values defined in Section 7.3.1 results in the
-   following signature value
+m_1 = "9872ad089e452c7b6e283dfac2a80d58e8d0ff71cc4d5e310a1debdda4a45f02"
+m_2 = "c344136d9ab02da4dd5908bbba913ae6f58c2cc844b802a6f811f5fb075f9b80"
+m_3 = "7372e9daa5ed31e6cd5c825eac1b855e84476a1d94932aa348e07b73"
+m_4 = "77fe97eb97a1ebe2e81e4e3597a3ee740a66e9ef2412472c"
+m_5 = "496694774c5604ab1b2544eababcf0f53278ff50"
+m_6 = "515ae153e22aae04ad16f759e07237b4"
+m_7 = "d183ddc6e2665aa4e2f088af"
+m_8 = "ac55fb33a75909ed"
+m_9 = "96012096"
+m_10 = ""
 
-"abfa513cdb323e47214b7c182fb623197a0681b753f897545a73d82ee133a8ecf69db9a
-a09fe425df4e7687d99d779db5c66199c0dc9d2a442d331c43f56e060edc69a69ed2f13d
-e3813b98ce6b05737"
+SK = "2eee0f60a8a3a8bec0ee942bfd46cbdae9a0738ee68f5a64e7238311cf09a079"
+PK = "92d37d1d6cd38fea3a873953333eab23a4c0377e3e049974eb62bd45949cdeb18f
+      b0490edcd4429adff56e65cbce42cf188b31bddbd619e419b99c2c41b38179eb00
+      1963bc3decaae0d9f702c7a8c004f207f46c734a5eae2e8e82833f3e7ea5"
+header = ""
+
+B = "8607ebc413b397c1e27ce591d1daa39f73da329018bda0f90bf996355cc28c3cdba
+     19feeb81e35be9e1503a018e4086e"
+domain = "333d8686761cff65a3a2ef20bfa217d37bdf19105e87c210e9ce64ea1210a1
+          57"
+
+signature = "abfa513cdb323e47214b7c182fb623197a0681b753f897545a73d82ee13
+             3a8ecf69db9aa09fe425df4e7687d99d779db5c66199c0dc9d2a442d331
+             c43f56e060edc69a69ed2f13de3813b98ce6b05737"
 
 C.1.1.2.  Modified Message Signature
 
-   Using the following header
+   The following fixture should fail signature validation due to the
+   message value being different from what was signed.
 
-   "11223344556677889900aabbccddeeff"
+m_1 = ""
 
-   And the following message (the first message defined in
-   Section 3.3.3)
+SK = "2eee0f60a8a3a8bec0ee942bfd46cbdae9a0738ee68f5a64e7238311cf09a079"
+PK = "92d37d1d6cd38fea3a873953333eab23a4c0377e3e049974eb62bd45949cdeb18f
+      b0490edcd4429adff56e65cbce42cf188b31bddbd619e419b99c2c41b38179eb00
+      1963bc3decaae0d9f702c7a8c004f207f46c734a5eae2e8e82833f3e7ea5"
+header = "11223344556677889900aabbccddeeff"
 
-   ""
+signature = "98eb37fceb31115bf647f2983aef578ad895e55f7451b1add02fa738224
+             cb89a31b148eace4d20d001be31d162c58d12574f30e68665b6403956a8
+             3b23a16f1daceacce8c5fde25d3defd52d6d5ff2e1"
 
-   With the following signature
-
-"98eb37fceb31115bf647f2983aef578ad895e55f7451b1add02fa738224cb89a31b148e
-ace4d20d001be31d162c58d12574f30e68665b6403956a83b23a16f1daceacce8c5fde25
-d3defd52d6d5ff2e1"
-
-   Along with the PK value as defined in Section 7.3.1 as inputs into
-   the Verify operation should fail signature validation due to the
-   message value being different from what was signed
+valid: "false"
+reason: "modified message"
 
 C.1.1.3.  Extra Unsigned Message Signature
 
-   Using the following header
-
-   "11223344556677889900aabbccddeeff"
-
-   And the following messages (the two first messages defined in
-   Section 3.3.3)
-
-   "9872ad089e452c7b6e283dfac2a80d58e8d0ff71cc4d5e310a1debdda4a45f02"
-
-   "c344136d9ab02da4dd5908bbba913ae6f58c2cc844b802a6f811f5fb075f9b80"
-
-   With the following signature (which is a signature to only the first
-   of the above two messages)
-
-"98eb37fceb31115bf647f2983aef578ad895e55f7451b1add02fa738224cb89a31b148e
-ace4d20d001be31d162c58d12574f30e68665b6403956a83b23a16f1daceacce8c5fde25
-d3defd52d6d5ff2e1"
-
-   Along with the PK value as defined in Section 7.3.1 as inputs into
-   the Verify operation should fail signature validation due to an
+   The following fixture should fail signature validation due to an
    additional message being supplied that was not signed.
+
+m_1 = "9872ad089e452c7b6e283dfac2a80d58e8d0ff71cc4d5e310a1debdda4a45f02"
+m_2 = "c344136d9ab02da4dd5908bbba913ae6f58c2cc844b802a6f811f5fb075f9b80"
+
+SK = "2eee0f60a8a3a8bec0ee942bfd46cbdae9a0738ee68f5a64e7238311cf09a079"
+PK = "92d37d1d6cd38fea3a873953333eab23a4c0377e3e049974eb62bd45949cdeb18f
+      b0490edcd4429adff56e65cbce42cf188b31bddbd619e419b99c2c41b38179eb00
+      1963bc3decaae0d9f702c7a8c004f207f46c734a5eae2e8e82833f3e7ea5"
+header = "11223344556677889900aabbccddeeff"
+
+signature = "98eb37fceb31115bf647f2983aef578ad895e55f7451b1add02fa738224
+             cb89a31b148eace4d20d001be31d162c58d12574f30e68665b6403956a8
+             3b23a16f1daceacce8c5fde25d3defd52d6d5ff2e1"
+
+valid: "false"
+reason: "extra unsigned message"
 
 C.1.1.4.  Missing Message Signature
 
-   Using the following header
+   The following fixture should fail signature validation due to missing
+   messages that were originally present during the signing (the
+   presented signature was generated with all the messages in
+   Section 3.3.3 as input).
 
-   "11223344556677889900aabbccddeeff"
+m_1 = "9872ad089e452c7b6e283dfac2a80d58e8d0ff71cc4d5e310a1debdda4a45f02"
+m_2 = "c344136d9ab02da4dd5908bbba913ae6f58c2cc844b802a6f811f5fb075f9b80"
 
-   And the following messages (the two first messages defined in
-   Section 3.3.3)
+SK = "2eee0f60a8a3a8bec0ee942bfd46cbdae9a0738ee68f5a64e7238311cf09a079"
+PK = "92d37d1d6cd38fea3a873953333eab23a4c0377e3e049974eb62bd45949cdeb18f
+      b0490edcd4429adff56e65cbce42cf188b31bddbd619e419b99c2c41b38179eb00
+      1963bc3decaae0d9f702c7a8c004f207f46c734a5eae2e8e82833f3e7ea5"
+header = "11223344556677889900aabbccddeeff"
 
-   "9872ad089e452c7b6e283dfac2a80d58e8d0ff71cc4d5e310a1debdda4a45f02"
+signature = "97a296c83ed3626fe254d26021c5e9a087b580f1e8bc91bb51efb04420b
+             fdaca215fe376a0bc12440bcc52224fb33c696cca9239b9f28dcddb7bd8
+             50aae9cd1a9c3e9f3639953fe789dbba53b8f0dd6f"
 
-   "c344136d9ab02da4dd5908bbba913ae6f58c2cc844b802a6f811f5fb075f9b80"
-
-   With the following signature (which is a signature on all the
-   messages defined in Section 3.3.3)
-
-"97a296c83ed3626fe254d26021c5e9a087b580f1e8bc91bb51efb04420bfdaca215fe37
-6a0bc12440bcc52224fb33c696cca9239b9f28dcddb7bd850aae9cd1a9c3e9f3639953fe
-789dbba53b8f0dd6f"
-
-   Along with the PK value as defined in Section 7.3.1 as inputs into
-   the Verify operation should fail signature validation due to missing
-   messages that were originally present during the signing.
+valid: "false"
+reason: "missing messages"
 
 C.1.1.5.  Reordered Message Signature
 
-   Using the following header
+   The following fixture should fail signature validation due to
+   messages being re-ordered from the order in which they were signed.
 
-   "11223344556677889900aabbccddeeff"
+m_1 = ""
+m_2 = "96012096"
+m_3 = "ac55fb33a75909ed"
+m_4 = "d183ddc6e2665aa4e2f088af"
+m_5 = "515ae153e22aae04ad16f759e07237b4"
+m_6 = "496694774c5604ab1b2544eababcf0f53278ff50"
+m_7 = "77fe97eb97a1ebe2e81e4e3597a3ee740a66e9ef2412472c"
+m_8 = "7372e9daa5ed31e6cd5c825eac1b855e84476a1d94932aa348e07b73"
+m_9 = "c344136d9ab02da4dd5908bbba913ae6f58c2cc844b802a6f811f5fb075f9b80"
+m_10 = "9872ad089e452c7b6e283dfac2a80d58e8d0ff71cc4d5e310a1debdda4a45f02
+        "
 
-   And the following messages (re-ordering of the messages defined in
-   Section 3.3.3)
+SK = "2eee0f60a8a3a8bec0ee942bfd46cbdae9a0738ee68f5a64e7238311cf09a079"
+PK = "92d37d1d6cd38fea3a873953333eab23a4c0377e3e049974eb62bd45949cdeb18f
+      b0490edcd4429adff56e65cbce42cf188b31bddbd619e419b99c2c41b38179eb00
+      1963bc3decaae0d9f702c7a8c004f207f46c734a5eae2e8e82833f3e7ea5"
+header = "11223344556677889900aabbccddeeff"
 
-   ""
+signature = "97a296c83ed3626fe254d26021c5e9a087b580f1e8bc91bb51efb04420b
+             fdaca215fe376a0bc12440bcc52224fb33c696cca9239b9f28dcddb7bd8
+             50aae9cd1a9c3e9f3639953fe789dbba53b8f0dd6f"
 
-   "96012096"
-
-   "ac55fb33a75909ed"
-
-   "d183ddc6e2665aa4e2f088af"
-
-   "515ae153e22aae04ad16f759e07237b4"
-
-   "496694774c5604ab1b2544eababcf0f53278ff50"
-
-   "77fe97eb97a1ebe2e81e4e3597a3ee740a66e9ef2412472c"
-
-   "7372e9daa5ed31e6cd5c825eac1b855e84476a1d94932aa348e07b73"
-
-   "c344136d9ab02da4dd5908bbba913ae6f58c2cc844b802a6f811f5fb075f9b80"
-
-   "9872ad089e452c7b6e283dfac2a80d58e8d0ff71cc4d5e310a1debdda4a45f02"
-
-   With the following signature
-
-"97a296c83ed3626fe254d26021c5e9a087b580f1e8bc91bb51efb04420bfdaca215fe37
-6a0bc12440bcc52224fb33c696cca9239b9f28dcddb7bd850aae9cd1a9c3e9f3639953fe
-789dbba53b8f0dd6f"
-
-   Along with the PK value as defined in Section 7.3.1 as inputs into
-   the Verify operation should fail signature validation due to messages
-   being re-ordered from the order in which they were signed
+valid: "false"
+reason: "re-ordered messages"
 
 C.1.1.6.  Wrong Public Key Signature
 
-   Using the following header
+   The following fixture should fail signature validation due to public
+   key used to verify is in-correct.
 
-   "11223344556677889900aabbccddeeff"
+m_1 = "9872ad089e452c7b6e283dfac2a80d58e8d0ff71cc4d5e310a1debdda4a45f02"
+m_2 = "c344136d9ab02da4dd5908bbba913ae6f58c2cc844b802a6f811f5fb075f9b80"
+m_3 = "7372e9daa5ed31e6cd5c825eac1b855e84476a1d94932aa348e07b73"
+m_4 = "77fe97eb97a1ebe2e81e4e3597a3ee740a66e9ef2412472c"
+m_5 = "496694774c5604ab1b2544eababcf0f53278ff50"
+m_6 = "515ae153e22aae04ad16f759e07237b4"
+m_7 = "d183ddc6e2665aa4e2f088af"
+m_8 = "ac55fb33a75909ed"
+m_9 = "96012096"
+m_10 = ""
 
-   And the messages as defined in Section 3.3.3, mapped to the scalars
-   in Section 7.3.2 and with the following signature
+SK = "2eee0f60a8a3a8bec0ee942bfd46cbdae9a0738ee68f5a64e7238311cf09a079"
+PK = "b24c723803f84e210f7a95f6265c5cbfa4ecc51488bf7acf24b921807801c0798b
+      725b9a2dcfa29953efcdfef03328720196c78b2e613727fd6e085302a0cc2d8d7e
+      1d820cf1d36b20e79eee78c13a1a5da51a298f1aef86f07bc33388f089d8"
+header = "11223344556677889900aabbccddeeff"
 
-"97a296c83ed3626fe254d26021c5e9a087b580f1e8bc91bb51efb04420bfdaca215fe37
-6a0bc12440bcc52224fb33c696cca9239b9f28dcddb7bd850aae9cd1a9c3e9f3639953fe
-789dbba53b8f0dd6f"
+signature = "97a296c83ed3626fe254d26021c5e9a087b580f1e8bc91bb51efb04420b
+             fdaca215fe376a0bc12440bcc52224fb33c696cca9239b9f28dcddb7bd8
+             50aae9cd1a9c3e9f3639953fe789dbba53b8f0dd6f"
 
-   Along with the PK value as defined in Section 7.3.1 as inputs into
-   the Verify operation should fail signature validation due to public
-   key used to verify is in-correct
+valid: "false"
+reason: "wrong public key"
 
 C.1.1.7.  Wrong Header Signature
 
-   Using the following header
+   The following fixture should fail signature validation due to header
+   value being modified from what was originally signed.
 
-   "ffeeddccbbaa00998877665544332211"
+m_1 = "9872ad089e452c7b6e283dfac2a80d58e8d0ff71cc4d5e310a1debdda4a45f02"
+m_2 = "c344136d9ab02da4dd5908bbba913ae6f58c2cc844b802a6f811f5fb075f9b80"
+m_3 = "7372e9daa5ed31e6cd5c825eac1b855e84476a1d94932aa348e07b73"
+m_4 = "77fe97eb97a1ebe2e81e4e3597a3ee740a66e9ef2412472c"
+m_5 = "496694774c5604ab1b2544eababcf0f53278ff50"
+m_6 = "515ae153e22aae04ad16f759e07237b4"
+m_7 = "d183ddc6e2665aa4e2f088af"
+m_8 = "ac55fb33a75909ed"
+m_9 = "96012096"
+m_10 = ""
 
-   And the messages as defined in Section 3.3.3 and with the following
-   signature
+SK = "2eee0f60a8a3a8bec0ee942bfd46cbdae9a0738ee68f5a64e7238311cf09a079"
+PK = "92d37d1d6cd38fea3a873953333eab23a4c0377e3e049974eb62bd45949cdeb18f
+      b0490edcd4429adff56e65cbce42cf188b31bddbd619e419b99c2c41b38179eb00
+      1963bc3decaae0d9f702c7a8c004f207f46c734a5eae2e8e82833f3e7ea5"
+header = "ffeeddccbbaa00998877665544332211"
 
-"97a296c83ed3626fe254d26021c5e9a087b580f1e8bc91bb51efb04420bfdaca215fe37
-6a0bc12440bcc52224fb33c696cca9239b9f28dcddb7bd850aae9cd1a9c3e9f3639953fe
-789dbba53b8f0dd6f"
+signature = "97a296c83ed3626fe254d26021c5e9a087b580f1e8bc91bb51efb04420b
+             fdaca215fe376a0bc12440bcc52224fb33c696cca9239b9f28dcddb7bd8
+             50aae9cd1a9c3e9f3639953fe789dbba53b8f0dd6f"
 
-   Along with the PK value as defined in Section 7.3.1 as inputs into
-   the Verify operation should fail signature validation due to header
-   value being modified from what was originally signed
+valid: "false"
+reason: "different header"
 
 C.1.2.  Proof Test Vectors
 
 C.1.2.1.  No Header Valid Proof
 
-   Using messages, PK and signature as in No Header Valid Signature
-   (#no-header-valid-signature), with only every other messages
-   disclosed (messages in index 0, 2, 4 and 6, in that order), with no
-   header and the following presentation header
+m_1 = "9872ad089e452c7b6e283dfac2a80d58e8d0ff71cc4d5e310a1debdda4a45f02"
+m_2 = "c344136d9ab02da4dd5908bbba913ae6f58c2cc844b802a6f811f5fb075f9b80"
+m_3 = "7372e9daa5ed31e6cd5c825eac1b855e84476a1d94932aa348e07b73"
+m_4 = "77fe97eb97a1ebe2e81e4e3597a3ee740a66e9ef2412472c"
+m_5 = "496694774c5604ab1b2544eababcf0f53278ff50"
+m_6 = "515ae153e22aae04ad16f759e07237b4"
+m_7 = "d183ddc6e2665aa4e2f088af"
+m_8 = "ac55fb33a75909ed"
+m_9 = "96012096"
+m_10 = ""
 
-   "bed231d880675ed101ead304512e043ade9958dd0241ea70b4b3957fba941501"
+public_key = "92d37d1d6cd38fea3a873953333eab23a4c0377e3e049974eb62bd4594
+              9cdeb18fb0490edcd4429adff56e65cbce42cf188b31bddbd619e419b9
+              9c2c41b38179eb001963bc3decaae0d9f702c7a8c004f207f46c734a5e
+              ae2e8e82833f3e7ea5"
+signature = "abfa513cdb323e47214b7c182fb623197a0681b753f897545a73d82ee13
+             3a8ecf69db9aa09fe425df4e7687d99d779db5c66199c0dc9d2a442d331
+             c43f56e060edc69a69ed2f13de3813b98ce6b05737"
+header = ""
+presentation_header = "bed231d880675ed101ead304512e043ade9958dd0241ea70b
+                       4b3957fba941501"
+revealed_indexes = [1, 3, 5, 7]
 
-   while using the mocked rng defined in Section 7.1, will result to the
-   following proof value
+T = "8eff938145940dc45a79c196d773d4f618388f50b52fdcdc07a79fa0eef7d4e6eec
+     5f9d3a2130c951feb8aae85020cec"
+domain = "333d8686761cff65a3a2ef20bfa217d37bdf19105e87c210e9ce64ea1210a1
+          57"
+challenge = "628e03e4eb0303af7162f36a119313c3396fe6bca6082238fe396e8c08e
+             607c4"
 
-"ae46046037ed58bfa5771c603895b26b42748a3071a1dc9f8a272a4bc030bc3cda7cfa8
-686a6dc8382d728ad96e8d8ceb6ad6b76b99242514e520c43dd7d1a0728ce709d977c4dd
-200874e4acffa5b4cc0cbbd37c00d979d8688c636770cc8b428ea9f05ed60cd85fdbd4c2
-fd73092e8bfc167c244d6e285ace1deade4fe8ce74fe2993a041e84004fe7d3dd170db76
-5f7811a91043c4e75e9231804d577bfa533ec7a44bb6e49eb85089d8df1dc1acfb00ea0c
-7bdce5609595099e3cf7559c1715df6ec6982c5d9fffd317955ec3387a9055de28691e39
-9b5af14722ae044a506d622e0e6ff0de8d1e4d4f3e9e5fdb01c4dbab02826ac38cb40eb8
-0afe7b9d661dc27c94b146fedea19353b70310714932674c1f4bc1edc2c17605749e0bbb
-60a77ac62a606d31081ff5a52e1485be257b2c0afa4b676438b0eaa0bd483c66828bc660
-32b91fbe8a309408e595e085a1b55e2dd12789e6f522ef5682ac46deb628e03e4eb0303a
-f7162f36a119313c3396fe6bca6082238fe396e8c08e607c4"
+proof = "ae46046037ed58bfa5771c603895b26b42748a3071a1dc9f8a272a4bc030bc3
+         cda7cfa8686a6dc8382d728ad96e8d8ceb6ad6b76b99242514e520c43dd7d1a
+         0728ce709d977c4dd200874e4acffa5b4cc0cbbd37c00d979d8688c636770cc
+         8b428ea9f05ed60cd85fdbd4c2fd73092e8bfc167c244d6e285ace1deade4fe
+         8ce74fe2993a041e84004fe7d3dd170db765f7811a91043c4e75e9231804d57
+         7bfa533ec7a44bb6e49eb85089d8df1dc1acfb00ea0c7bdce5609595099e3cf
+         7559c1715df6ec6982c5d9fffd317955ec3387a9055de28691e399b5af14722
+         ae044a506d622e0e6ff0de8d1e4d4f3e9e5fdb01c4dbab02826ac38cb40eb80
+         afe7b9d661dc27c94b146fedea19353b70310714932674c1f4bc1edc2c17605
+         749e0bbb60a77ac62a606d31081ff5a52e1485be257b2c0afa4b676438b0eaa
+         0bd483c66828bc66032b91fbe8a309408e595e085a1b55e2dd12789e6f522ef
+         5682ac46deb628e03e4eb0303af7162f36a119313c3396fe6bca6082238fe39
+         6e8c08e607c4"
 
 C.1.2.2.  No Presentation Header Valid Proof
 
-   Using the same header, PK, messages and signature as in Multi-
-   Message, All Messages Disclosed Proof (#valid-multi-message-all-
-   messages-disclosed-proof), with every other message disclosed
-   (messages in index 0, 2, 4 and 6, in that order), with no
-   presentation header, while using the mocked rng defined in
-   Section 7.1, will result to the following proof value
+m_1 = "9872ad089e452c7b6e283dfac2a80d58e8d0ff71cc4d5e310a1debdda4a45f02"
+m_2 = "c344136d9ab02da4dd5908bbba913ae6f58c2cc844b802a6f811f5fb075f9b80"
+m_3 = "7372e9daa5ed31e6cd5c825eac1b855e84476a1d94932aa348e07b73"
+m_4 = "77fe97eb97a1ebe2e81e4e3597a3ee740a66e9ef2412472c"
+m_5 = "496694774c5604ab1b2544eababcf0f53278ff50"
+m_6 = "515ae153e22aae04ad16f759e07237b4"
+m_7 = "d183ddc6e2665aa4e2f088af"
+m_8 = "ac55fb33a75909ed"
+m_9 = "96012096"
+m_10 = ""
 
-"ac0424b2a984c55d0061aa61df105f2c882d393494f3f4205d1e73f93c9c76b30664bae
-b3dc87f23fbf4035fb0a8e76b851dd39cecce8843e747ccf540f0850a30e1317f8897a56
-c2d85bfc1e0b4dba1b0e0322d89aad4feb8b21c414a384a015238f4643b9d075bc6638ec
-42d0e285f73c6ca9830be2a5bb48955ddb094751026493147def3cfe2a37bbd89a4536bd
-ff6548d891d5206ac6b69c22c6fa8624512caeb80c56dbd79b7a4c8050bc9e782232f959
-4087561b10d7f4b0bef708458096637a34962399e918d5adb496faf7c38ded94fe79c3bf
-dc53c81f0dcb0da3f1bed0dbfdb6f0310d71d50a63b265e1992dd7d12315bf11da69a889
-7d8e33be36f116d58eff998f80e23ad0aad544e93615a5f10f169a3aed7c4d6266191a21
-412f4f4d8eb5096a05243b809c4c53a8d237817dfa15a403d8943b968d1216c753fb988f
-bcfe9280232c25cac1570873a66d3f4a7e713fb19723f5b99338f053f08fae9f905b10e0
-526451968e25569e3779f642a4d2b6bcc1e00be28e2711d1a"
+public_key = "92d37d1d6cd38fea3a873953333eab23a4c0377e3e049974eb62bd4594
+              9cdeb18fb0490edcd4429adff56e65cbce42cf188b31bddbd619e419b9
+              9c2c41b38179eb001963bc3decaae0d9f702c7a8c004f207f46c734a5e
+              ae2e8e82833f3e7ea5"
+signature = "97a296c83ed3626fe254d26021c5e9a087b580f1e8bc91bb51efb04420b
+             fdaca215fe376a0bc12440bcc52224fb33c696cca9239b9f28dcddb7bd8
+             50aae9cd1a9c3e9f3639953fe789dbba53b8f0dd6f"
+header = "11223344556677889900aabbccddeeff"
+presentation_header = ""
+revealed_indexes = [1, 3, 5, 7]
+
+T = "89f37630b485590b80f54c96210a00139366785701a99de2a5b560b7304b16ff20f
+     81edb2027de2ed6bd58206a6aa2d3"
+domain = "6f7ee8de30835599bb540d2cb4dd02fd0c6cf8246f14c9ee9a8463f7fd400f
+          7b"
+challenge = "08fae9f905b10e0526451968e25569e3779f642a4d2b6bcc1e00be28e27
+             11d1a"
+
+proof = "ac0424b2a984c55d0061aa61df105f2c882d393494f3f4205d1e73f93c9c76b
+         30664baeb3dc87f23fbf4035fb0a8e76b851dd39cecce8843e747ccf540f085
+         0a30e1317f8897a56c2d85bfc1e0b4dba1b0e0322d89aad4feb8b21c414a384
+         a015238f4643b9d075bc6638ec42d0e285f73c6ca9830be2a5bb48955ddb094
+         751026493147def3cfe2a37bbd89a4536bdff6548d891d5206ac6b69c22c6fa
+         8624512caeb80c56dbd79b7a4c8050bc9e782232f9594087561b10d7f4b0bef
+         708458096637a34962399e918d5adb496faf7c38ded94fe79c3bfdc53c81f0d
+         cb0da3f1bed0dbfdb6f0310d71d50a63b265e1992dd7d12315bf11da69a8897
+         d8e33be36f116d58eff998f80e23ad0aad544e93615a5f10f169a3aed7c4d62
+         66191a21412f4f4d8eb5096a05243b809c4c53a8d237817dfa15a403d8943b9
+         68d1216c753fb988fbcfe9280232c25cac1570873a66d3f4a7e713fb19723f5
+         b99338f053f08fae9f905b10e0526451968e25569e3779f642a4d2b6bcc1e00
+         be28e2711d1a"
 
 C.1.3.  Hash to Scalar Test Vectors
 
    Using the following input message,
 
-   "9872ad089e452c7b6e283dfac2a80d58e8d0ff71cc4d5e310a1debdda4a45f02"
+msg = "9872ad089e452c7b6e283dfac2a80d58e8d0ff71cc4d5e310a1debdda4a45f02"
 
    And the default dst defined in hash_to_scalar (#hash-to-scalar),
    i.e.,
 
-"4242535f424c53313233383147315f584f463a5348414b452d3235365f535357555f524
-f5f4832475f484d32535f4832535f"
+dst = "4242535f424c53313233383147315f584f463a5348414b452d3235365f5353575
+       55f524f5f4832475f484d32535f4832535f"
 
    We get the following scalar, encoded with I2OSP and represented in
    big endian order,
 
-   "0500031f786fde5326aa9370dd7ffe9535ec7a52cf2b8f432cad5d9acfb73cd3"
+scalar = "0500031f786fde5326aa9370dd7ffe9535ec7a52cf2b8f432cad5d9acfb73c
+          d3"
 
 C.2.  BLS12-381-SHA-256 Ciphersuite
 
@@ -3564,219 +3773,294 @@ C.2.1.  Signature Test Vectors
 
 C.2.1.1.  No Header Valid Signature
 
-   Using the messages defined in Section 3.3.3, with no header, along
-   with the SK and PK values defined in Section 7.4.1 results in the
-   following signature value
+m_1 = "9872ad089e452c7b6e283dfac2a80d58e8d0ff71cc4d5e310a1debdda4a45f02"
+m_2 = "c344136d9ab02da4dd5908bbba913ae6f58c2cc844b802a6f811f5fb075f9b80"
+m_3 = "7372e9daa5ed31e6cd5c825eac1b855e84476a1d94932aa348e07b73"
+m_4 = "77fe97eb97a1ebe2e81e4e3597a3ee740a66e9ef2412472c"
+m_5 = "496694774c5604ab1b2544eababcf0f53278ff50"
+m_6 = "515ae153e22aae04ad16f759e07237b4"
+m_7 = "d183ddc6e2665aa4e2f088af"
+m_8 = "ac55fb33a75909ed"
+m_9 = "96012096"
+m_10 = ""
 
-"ae0b1807865598b3884e3e9b110e8faec662050dc9b4d95309d957fd30f6fc24161f6f8
-b5680f1f5d1b547be221547915ca665c7b3087a336d5e0c5fcfea62576afd13e563b730e
-f6d6d81f9944ab95b"
+SK = "60e55110f76883a13d030b2f6bd11883422d5abde717569fc0731f51237169fc"
+PK = "a820f230f6ae38503b86c70dc50b61c58a77e45c39ab25c0652bbaa8fa136f2851
+      bd4781c9dcde39fc9d1d52c9e60268061e7d7632171d91aa8d460acee0e96f1e7c
+      4cfb12d3ff9ab5d5dc91c277db75c845d649ef3c4f63aebc364cd55ded0c"
+header = ""
+
+B = "98e38eadb6a2232cf91f41861089cda14d7e3ddef0c6eaba4d11a2732f66408f394
+     d58301ffcc8fcfb3c89bb75136f61"
+domain = "41c5fe0290d0da734ce9bba57bfe0dfc14f3f9cfef18a0d7438cf2075fd71c
+          c7"
+
+signature = "ae0b1807865598b3884e3e9b110e8faec662050dc9b4d95309d957fd30f
+             6fc24161f6f8b5680f1f5d1b547be221547915ca665c7b3087a336d5e0c
+             5fcfea62576afd13e563b730ef6d6d81f9944ab95b"
 
 C.2.1.2.  Modified Message Signature
 
-   Using the following header
-
-   "11223344556677889900aabbccddeeff"
-
-   And the following message (the first message defined in
-   Section 3.3.3)
-
-   ""
-
-   With the following signature
-
-"88c0eb3bc1d97610c3a66d8a3a73f260f95a3028bccf7fff7d9851e2acd9f3f32fdf58a
-5b34d12df8177adf37aa318a20f72be7d37a8e8d8441d1bc0bc75543c681bf061ce7e7f6
-091fe78c1cb8af103"
-
-   Along with the PK value as defined in Section 7.4.1 as inputs into
-   the Verify operation should fail signature validation due to the
+   The following fixture should fail signature validation due to the
    message value being different from what was signed.
+
+m_1 = ""
+
+SK = "60e55110f76883a13d030b2f6bd11883422d5abde717569fc0731f51237169fc"
+PK = "a820f230f6ae38503b86c70dc50b61c58a77e45c39ab25c0652bbaa8fa136f2851
+      bd4781c9dcde39fc9d1d52c9e60268061e7d7632171d91aa8d460acee0e96f1e7c
+      4cfb12d3ff9ab5d5dc91c277db75c845d649ef3c4f63aebc364cd55ded0c"
+header = "11223344556677889900aabbccddeeff"
+
+signature = "88c0eb3bc1d97610c3a66d8a3a73f260f95a3028bccf7fff7d9851e2acd
+             9f3f32fdf58a5b34d12df8177adf37aa318a20f72be7d37a8e8d8441d1b
+             c0bc75543c681bf061ce7e7f6091fe78c1cb8af103"
+
+valid: "false"
+reason: "modified message"
 
 C.2.1.3.  Extra Unsigned Message Signature
 
-   Using the following header
-
-   "11223344556677889900aabbccddeeff"
-
-   And the following messages (the two first messages defined in
-   Section 3.3.3)
-
-   "9872ad089e452c7b6e283dfac2a80d58e8d0ff71cc4d5e310a1debdda4a45f02"
-
-   "c344136d9ab02da4dd5908bbba913ae6f58c2cc844b802a6f811f5fb075f9b80"
-
-   With the following signature (which is a signature to only the first
-   of the above two messages)
-
-"88c0eb3bc1d97610c3a66d8a3a73f260f95a3028bccf7fff7d9851e2acd9f3f32fdf58a
-5b34d12df8177adf37aa318a20f72be7d37a8e8d8441d1bc0bc75543c681bf061ce7e7f6
-091fe78c1cb8af103"
-
-   Along with the PK value as defined in Section 7.4.1 as inputs into
-   the Verify operation should fail signature validation due to an
+   The following fixture should fail signature validation due to an
    additional message being supplied that was not signed.
+
+m_1 = "9872ad089e452c7b6e283dfac2a80d58e8d0ff71cc4d5e310a1debdda4a45f02"
+m_2 = "c344136d9ab02da4dd5908bbba913ae6f58c2cc844b802a6f811f5fb075f9b80"
+
+SK = "60e55110f76883a13d030b2f6bd11883422d5abde717569fc0731f51237169fc"
+PK = "a820f230f6ae38503b86c70dc50b61c58a77e45c39ab25c0652bbaa8fa136f2851
+      bd4781c9dcde39fc9d1d52c9e60268061e7d7632171d91aa8d460acee0e96f1e7c
+      4cfb12d3ff9ab5d5dc91c277db75c845d649ef3c4f63aebc364cd55ded0c"
+header = "11223344556677889900aabbccddeeff"
+
+signature = "88c0eb3bc1d97610c3a66d8a3a73f260f95a3028bccf7fff7d9851e2acd
+             9f3f32fdf58a5b34d12df8177adf37aa318a20f72be7d37a8e8d8441d1b
+             c0bc75543c681bf061ce7e7f6091fe78c1cb8af103"
+
+valid: "false"
+reason: "extra unsigned message"
 
 C.2.1.4.  Missing Message Signature
 
-   Using the following header
+   The following fixture should fail signature validation due to missing
+   messages that were originally present during the signing (the
+   presented signature was generated with all the messages in
+   Section 3.3.3 as input).
 
-   "11223344556677889900aabbccddeeff"
+m_1 = "9872ad089e452c7b6e283dfac2a80d58e8d0ff71cc4d5e310a1debdda4a45f02"
+m_2 = "c344136d9ab02da4dd5908bbba913ae6f58c2cc844b802a6f811f5fb075f9b80"
 
-   And the following messages (the two first messages defined in
-   Section 3.3.3)
+SK = "60e55110f76883a13d030b2f6bd11883422d5abde717569fc0731f51237169fc"
+PK = "a820f230f6ae38503b86c70dc50b61c58a77e45c39ab25c0652bbaa8fa136f2851
+      bd4781c9dcde39fc9d1d52c9e60268061e7d7632171d91aa8d460acee0e96f1e7c
+      4cfb12d3ff9ab5d5dc91c277db75c845d649ef3c4f63aebc364cd55ded0c"
+header = "11223344556677889900aabbccddeeff"
 
-   "9872ad089e452c7b6e283dfac2a80d58e8d0ff71cc4d5e310a1debdda4a45f02"
+signature = "895cd9c0ccb9aca4de913218655346d718711472f2bf1f3e68916de106a
+             0d93cf2f47200819b45920bbda541db2d91480665df253fedab2843055b
+             dc02535d83baddbbb2803ec3808e074f71f199751e"
 
-   "c344136d9ab02da4dd5908bbba913ae6f58c2cc844b802a6f811f5fb075f9b80"
-
-   With the following signature (which is a signature on all the
-   messages defined in Section 3.3.3)
-
-"895cd9c0ccb9aca4de913218655346d718711472f2bf1f3e68916de106a0d93cf2f4720
-0819b45920bbda541db2d91480665df253fedab2843055bdc02535d83baddbbb2803ec38
-08e074f71f199751e"
-
-   Along with the PK value as defined in Section 7.4.1 as inputs into
-   the Verify operation should fail signature validation due to missing
-   messages that were originally present during the signing.
+valid: "false"
+reason: "missing messages"
 
 C.2.1.5.  Reordered Message Signature
 
-   Using the following header
+   The following fixture should fail signature validation due to
+   messages being re-ordered from the order in which they were signed.
 
-   "11223344556677889900aabbccddeeff"
+m_1 = ""
+m_2 = "96012096"
+m_3 = "ac55fb33a75909ed"
+m_4 = "d183ddc6e2665aa4e2f088af"
+m_5 = "515ae153e22aae04ad16f759e07237b4"
+m_6 = "496694774c5604ab1b2544eababcf0f53278ff50"
+m_7 = "77fe97eb97a1ebe2e81e4e3597a3ee740a66e9ef2412472c"
+m_8 = "7372e9daa5ed31e6cd5c825eac1b855e84476a1d94932aa348e07b73"
+m_9 = "c344136d9ab02da4dd5908bbba913ae6f58c2cc844b802a6f811f5fb075f9b80"
+m_10 = "9872ad089e452c7b6e283dfac2a80d58e8d0ff71cc4d5e310a1debdda4a45f02
+        "
 
-   And the following messages (re-ordering of the messages defined in
-   Section 3.3.3)
+SK = "60e55110f76883a13d030b2f6bd11883422d5abde717569fc0731f51237169fc"
+PK = "a820f230f6ae38503b86c70dc50b61c58a77e45c39ab25c0652bbaa8fa136f2851
+      bd4781c9dcde39fc9d1d52c9e60268061e7d7632171d91aa8d460acee0e96f1e7c
+      4cfb12d3ff9ab5d5dc91c277db75c845d649ef3c4f63aebc364cd55ded0c"
+header = "11223344556677889900aabbccddeeff"
 
-   ""
+signature = "895cd9c0ccb9aca4de913218655346d718711472f2bf1f3e68916de106a
+             0d93cf2f47200819b45920bbda541db2d91480665df253fedab2843055b
+             dc02535d83baddbbb2803ec3808e074f71f199751e"
 
-   "96012096"
-
-   "ac55fb33a75909ed"
-
-   "d183ddc6e2665aa4e2f088af"
-
-   "515ae153e22aae04ad16f759e07237b4"
-
-   "496694774c5604ab1b2544eababcf0f53278ff50"
-
-   "77fe97eb97a1ebe2e81e4e3597a3ee740a66e9ef2412472c"
-
-   "7372e9daa5ed31e6cd5c825eac1b855e84476a1d94932aa348e07b73"
-
-   "c344136d9ab02da4dd5908bbba913ae6f58c2cc844b802a6f811f5fb075f9b80"
-
-   "9872ad089e452c7b6e283dfac2a80d58e8d0ff71cc4d5e310a1debdda4a45f02"
-
-   With the following signature
-
-"895cd9c0ccb9aca4de913218655346d718711472f2bf1f3e68916de106a0d93cf2f4720
-0819b45920bbda541db2d91480665df253fedab2843055bdc02535d83baddbbb2803ec38
-08e074f71f199751e"
-
-   Along with the PK value as defined in Section 7.4.1 as inputs into
-   the Verify operation should fail signature validation due to messages
-   being re-ordered from the order in which they were signed.
+valid: "false"
+reason: "re-ordered messages"
 
 C.2.1.6.  Wrong Public Key Signature
 
-   Using the following header
-
-   "11223344556677889900aabbccddeeff"
-
-   And the messages as defined in Section 3.3.3 and with the following
-   signature
-
-"895cd9c0ccb9aca4de913218655346d718711472f2bf1f3e68916de106a0d93cf2f4720
-0819b45920bbda541db2d91480665df253fedab2843055bdc02535d83baddbbb2803ec38
-08e074f71f199751e"
-
-   Along with the PK value as defined in Section 7.4.1 as inputs into
-   the Verify operation should fail signature validation due to public
+   The following fixture should fail signature validation due to public
    key used to verify is in-correct.
+
+m_1 = "9872ad089e452c7b6e283dfac2a80d58e8d0ff71cc4d5e310a1debdda4a45f02"
+m_2 = "c344136d9ab02da4dd5908bbba913ae6f58c2cc844b802a6f811f5fb075f9b80"
+m_3 = "7372e9daa5ed31e6cd5c825eac1b855e84476a1d94932aa348e07b73"
+m_4 = "77fe97eb97a1ebe2e81e4e3597a3ee740a66e9ef2412472c"
+m_5 = "496694774c5604ab1b2544eababcf0f53278ff50"
+m_6 = "515ae153e22aae04ad16f759e07237b4"
+m_7 = "d183ddc6e2665aa4e2f088af"
+m_8 = "ac55fb33a75909ed"
+m_9 = "96012096"
+m_10 = ""
+
+SK = "60e55110f76883a13d030b2f6bd11883422d5abde717569fc0731f51237169fc"
+PK = "b064bd8d1ba99503cbb7f9d7ea00bce877206a85b1750e5583dd9399828a4d2061
+      0cb937ea928d90404c239b2835ffb104220a9c66a4c9ed3b54c0cac9ea465d0429
+      556b438ceefb59650ddf67e7a8f103677561b7ef7fe3c3357ec6b94d41c6"
+header = "11223344556677889900aabbccddeeff"
+
+signature = "895cd9c0ccb9aca4de913218655346d718711472f2bf1f3e68916de106a
+             0d93cf2f47200819b45920bbda541db2d91480665df253fedab2843055b
+             dc02535d83baddbbb2803ec3808e074f71f199751e"
+
+valid: "false"
+reason: "wrong public key"
 
 C.2.1.7.  Wrong Header Signature
 
-   Using the following header
-
-   "ffeeddccbbaa00998877665544332211"
-
-   And the messages as defined in Section 3.3.3 and with the following
-   signature
-
-"895cd9c0ccb9aca4de913218655346d718711472f2bf1f3e68916de106a0d93cf2f4720
-0819b45920bbda541db2d91480665df253fedab2843055bdc02535d83baddbbb2803ec38
-08e074f71f199751e"
-
-   Along with the PK value as defined in Section 7.4.1 as inputs into
-   the Verify operation should fail signature validation due to header
+   The following fixture should fail signature validation due to header
    value being modified from what was originally signed.
+
+m_1 = "9872ad089e452c7b6e283dfac2a80d58e8d0ff71cc4d5e310a1debdda4a45f02"
+m_2 = "c344136d9ab02da4dd5908bbba913ae6f58c2cc844b802a6f811f5fb075f9b80"
+m_3 = "7372e9daa5ed31e6cd5c825eac1b855e84476a1d94932aa348e07b73"
+m_4 = "77fe97eb97a1ebe2e81e4e3597a3ee740a66e9ef2412472c"
+m_5 = "496694774c5604ab1b2544eababcf0f53278ff50"
+m_6 = "515ae153e22aae04ad16f759e07237b4"
+m_7 = "d183ddc6e2665aa4e2f088af"
+m_8 = "ac55fb33a75909ed"
+m_9 = "96012096"
+m_10 = ""
+
+SK = "60e55110f76883a13d030b2f6bd11883422d5abde717569fc0731f51237169fc"
+PK = "a820f230f6ae38503b86c70dc50b61c58a77e45c39ab25c0652bbaa8fa136f2851
+      bd4781c9dcde39fc9d1d52c9e60268061e7d7632171d91aa8d460acee0e96f1e7c
+      4cfb12d3ff9ab5d5dc91c277db75c845d649ef3c4f63aebc364cd55ded0c"
+header = "ffeeddccbbaa00998877665544332211"
+
+signature = "895cd9c0ccb9aca4de913218655346d718711472f2bf1f3e68916de106a
+             0d93cf2f47200819b45920bbda541db2d91480665df253fedab2843055b
+             dc02535d83baddbbb2803ec3808e074f71f199751e"
+
+valid: "false"
+reason: "different header"
 
 C.2.2.  Proof Test Vectors
 
 C.2.2.1.  No Header Valid Proof
 
-   Using messages, PK and signature as in No Header Valid Signature
-   (#no-header-valid-signature-1), with only every other messages
-   disclosed (messages in index 0, 2, 4 and 6, in that order), with no
-   header and the following presentation header
+m_1 = "9872ad089e452c7b6e283dfac2a80d58e8d0ff71cc4d5e310a1debdda4a45f02"
+m_2 = "c344136d9ab02da4dd5908bbba913ae6f58c2cc844b802a6f811f5fb075f9b80"
+m_3 = "7372e9daa5ed31e6cd5c825eac1b855e84476a1d94932aa348e07b73"
+m_4 = "77fe97eb97a1ebe2e81e4e3597a3ee740a66e9ef2412472c"
+m_5 = "496694774c5604ab1b2544eababcf0f53278ff50"
+m_6 = "515ae153e22aae04ad16f759e07237b4"
+m_7 = "d183ddc6e2665aa4e2f088af"
+m_8 = "ac55fb33a75909ed"
+m_9 = "96012096"
+m_10 = ""
 
-   "bed231d880675ed101ead304512e043ade9958dd0241ea70b4b3957fba941501"
+public_key = "a820f230f6ae38503b86c70dc50b61c58a77e45c39ab25c0652bbaa8fa
+              136f2851bd4781c9dcde39fc9d1d52c9e60268061e7d7632171d91aa8d
+              460acee0e96f1e7c4cfb12d3ff9ab5d5dc91c277db75c845d649ef3c4f
+              63aebc364cd55ded0c"
+signature = "ae0b1807865598b3884e3e9b110e8faec662050dc9b4d95309d957fd30f
+             6fc24161f6f8b5680f1f5d1b547be221547915ca665c7b3087a336d5e0c
+             5fcfea62576afd13e563b730ef6d6d81f9944ab95b"
+header = ""
+presentation_header = "bed231d880675ed101ead304512e043ade9958dd0241ea70b
+                       4b3957fba941501"
+revealed_indexes = [1, 3, 5, 7]
 
-   while using the mocked rng defined in Section 7.1, will result to the
-   following proof value
+T = "a658203bac7d7221494e6c6885dec63984fbcae75c5042fda3ba0e2c3c8e38e8318
+     30c1e592b025340d148b012037682"
+domain = "41c5fe0290d0da734ce9bba57bfe0dfc14f3f9cfef18a0d7438cf2075fd71c
+          c7"
+challenge = "3f5f2904b6100e01b6cf94d9d6c5501fbbfd2e5e57c2dcb1cf117c41eed
+             cda57"
 
-"89cefce40c3dc7adcc8bcd07d92767d0f0397d0e120511b58b8403b531fa573987003fd
-235bdfe6fb5e9da937774c7799397bc951cd4030a78f8dae7820bfa150a243d74c3aa34d
-af6299dc0baaf7796705e952e2c8ac7d37c69e91db85012d61f3387f096a022361972d6a
-fd2c095eeb4adc95f72cfb739539f27f1917c7cc80fba233fd9eef52196cc31183d7c416
-8e6b87a66b249225398c31e2950e3e24420d3af3eeee3308933a343310cf822287dc95b8
-6eb5716e8ff23cc52c980d41218bdaeff521a242e5330daee27a1a499ac1a20b0c39477c
-ebf4936d0ec2b95e0384b80bba24febc527b0b640481df2125b58f85708590838ee32789
-ce1c755a6150ce6bf0650bff3dfff61eae16e88916f9869d75c7884554ea517f8dec320c
-011d211b1ec05073238d7949fe6d9ff6f729c475bbfc5a21c6fa6d35df92f79d43c3f78b
-cd3cb4c6e6de2ac27108316bd8d751fb445c5f6b4e6e104b227362efe3f5f2904b6100e0
-1b6cf94d9d6c5501fbbfd2e5e57c2dcb1cf117c41eedcda57"
+proof = "89cefce40c3dc7adcc8bcd07d92767d0f0397d0e120511b58b8403b531fa573
+         987003fd235bdfe6fb5e9da937774c7799397bc951cd4030a78f8dae7820bfa
+         150a243d74c3aa34daf6299dc0baaf7796705e952e2c8ac7d37c69e91db8501
+         2d61f3387f096a022361972d6afd2c095eeb4adc95f72cfb739539f27f1917c
+         7cc80fba233fd9eef52196cc31183d7c4168e6b87a66b249225398c31e2950e
+         3e24420d3af3eeee3308933a343310cf822287dc95b86eb5716e8ff23cc52c9
+         80d41218bdaeff521a242e5330daee27a1a499ac1a20b0c39477cebf4936d0e
+         c2b95e0384b80bba24febc527b0b640481df2125b58f85708590838ee32789c
+         e1c755a6150ce6bf0650bff3dfff61eae16e88916f9869d75c7884554ea517f
+         8dec320c011d211b1ec05073238d7949fe6d9ff6f729c475bbfc5a21c6fa6d3
+         5df92f79d43c3f78bcd3cb4c6e6de2ac27108316bd8d751fb445c5f6b4e6e10
+         4b227362efe3f5f2904b6100e01b6cf94d9d6c5501fbbfd2e5e57c2dcb1cf11
+         7c41eedcda57"
 
 C.2.2.2.  No Presentation Header Valid Proof
 
-   Using the same header, PK, messages and signature as in Multi-
-   Message, All Messages Disclosed Proof (#valid-multi-message-all-
-   messages-disclosed-proof-1), with every other message disclosed
-   (messages in index 0, 2, 4 and 6, in that order), with no
-   presentation header, while using the mocked rng defined in
-   Section 7.1, will result to the following proof value
+m_1 = "9872ad089e452c7b6e283dfac2a80d58e8d0ff71cc4d5e310a1debdda4a45f02"
+m_2 = "c344136d9ab02da4dd5908bbba913ae6f58c2cc844b802a6f811f5fb075f9b80"
+m_3 = "7372e9daa5ed31e6cd5c825eac1b855e84476a1d94932aa348e07b73"
+m_4 = "77fe97eb97a1ebe2e81e4e3597a3ee740a66e9ef2412472c"
+m_5 = "496694774c5604ab1b2544eababcf0f53278ff50"
+m_6 = "515ae153e22aae04ad16f759e07237b4"
+m_7 = "d183ddc6e2665aa4e2f088af"
+m_8 = "ac55fb33a75909ed"
+m_9 = "96012096"
+m_10 = ""
 
-"812a204f66c9084feed7383894d910f2c17399b3c4b4bed05660921de8539f5042318c3
-56609496a6ca0a26626661be78ca723b7182ccd314924b93a3997654fcd77e29e3847dc8
-81f422a751017705173ec094d2997221e134710d4fff1bd332fd2f270e96b6b8de89b2ff
-f1294dcd5bd0e1eb314b199f7fb7f5702839f409e167c6a78eb3a57a08a7996330f83ac1
-67d51c57f4ebabea87ad8e08b4b3875926d9d2427df59abd2e2befe32774b03668a5080c
-54412f81c4cbf47571b15a35c4f93bd38805c3224ca6c4d2f387c28288e8fffb0ab0c43c
-db860f31c739b3091192268789d3da05b97d277ab91699a209c97e9057a6cf66c9d4d311
-ea09c680d4aa2485bfdbaa7ee954a2e0b4f6ea542eda44a1adf2b19f63332b9de00f46c5
-33f1c696bc8b4aea5cc56b0cf12ecdba434b36324d754eabf1734e6c3301f300435797ed
-cb007eae6ef75bc5d5500a1ce74ba8f4e0c5c8836f42371c2c469265909585f44695f088
-ea39bda2317224f47208c7f77570deae84efea007c14f18ef"
+public_key = "a820f230f6ae38503b86c70dc50b61c58a77e45c39ab25c0652bbaa8fa
+              136f2851bd4781c9dcde39fc9d1d52c9e60268061e7d7632171d91aa8d
+              460acee0e96f1e7c4cfb12d3ff9ab5d5dc91c277db75c845d649ef3c4f
+              63aebc364cd55ded0c"
+signature = "895cd9c0ccb9aca4de913218655346d718711472f2bf1f3e68916de106a
+             0d93cf2f47200819b45920bbda541db2d91480665df253fedab2843055b
+             dc02535d83baddbbb2803ec3808e074f71f199751e"
+header = "11223344556677889900aabbccddeeff"
+presentation_header = ""
+revealed_indexes = [1, 3, 5, 7]
+
+T = "822cd8bc6b68ac133fd5eccbef1ce1bbbc01a7ca825287c11a2d239d26f814f1477
+     3047607ba655bf4d6882a4ae1dab0"
+domain = "6272832582a0ac96e6fe53e879422f24c51680b25fbf17bad22a35ea93ce5b
+          47"
+challenge = "09585f44695f088ea39bda2317224f47208c7f77570deae84efea007c14
+             f18ef"
+
+proof = "812a204f66c9084feed7383894d910f2c17399b3c4b4bed05660921de8539f5
+         042318c356609496a6ca0a26626661be78ca723b7182ccd314924b93a399765
+         4fcd77e29e3847dc881f422a751017705173ec094d2997221e134710d4fff1b
+         d332fd2f270e96b6b8de89b2fff1294dcd5bd0e1eb314b199f7fb7f5702839f
+         409e167c6a78eb3a57a08a7996330f83ac167d51c57f4ebabea87ad8e08b4b3
+         875926d9d2427df59abd2e2befe32774b03668a5080c54412f81c4cbf47571b
+         15a35c4f93bd38805c3224ca6c4d2f387c28288e8fffb0ab0c43cdb860f31c7
+         39b3091192268789d3da05b97d277ab91699a209c97e9057a6cf66c9d4d311e
+         a09c680d4aa2485bfdbaa7ee954a2e0b4f6ea542eda44a1adf2b19f63332b9d
+         e00f46c533f1c696bc8b4aea5cc56b0cf12ecdba434b36324d754eabf1734e6
+         c3301f300435797edcb007eae6ef75bc5d5500a1ce74ba8f4e0c5c8836f4237
+         1c2c469265909585f44695f088ea39bda2317224f47208c7f77570deae84efe
+         a007c14f18ef"
 
 C.2.3.  Hash to Scalar Test Vectors
 
    Using the following input message,
 
-   "9872ad089e452c7b6e283dfac2a80d58e8d0ff71cc4d5e310a1debdda4a45f02"
+msg = "9872ad089e452c7b6e283dfac2a80d58e8d0ff71cc4d5e310a1debdda4a45f02"
 
    And the default dst defined in hash_to_scalar (#hash-to-scalar),
    i.e.,
 
-"4242535f424c53313233383147315f584d443a5348412d3235365f535357555f524f5f4
-832475f484d32535f4832535f"
+dst = "4242535f424c53313233383147315f584d443a5348412d3235365f535357555f5
+       24f5f4832475f484d32535f4832535f"
 
    We get the following scalar, encoded with I2OSP and represented in
    big endian order,
 
-   "0f90cbee27beb214e6545becb8404640d3612da5d6758dffeccd77ed7169807c"
+scalar = "0f90cbee27beb214e6545becb8404640d3612da5d6758dffeccd77ed716980
+          7c"
 
 Appendix D.  Proof Generation and Verification Algorithmic Explanation
 
