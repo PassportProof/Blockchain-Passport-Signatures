@@ -5,11 +5,11 @@
 CFRG                                                           T. Looker
 Internet-Draft                                                  V. Kalos
 Intended status: Informational                                     MATTR
-Expires: 29 March 2024                                      A. Whitehead
+Expires: 25 April 2024                                      A. Whitehead
                                                                  Portage
                                                                M. Lodder
                                                                  CryptID
-                                                       26 September 2023
+                                                         23 October 2023
 
 
                         The BBS Signature Scheme
@@ -50,7 +50,7 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on 29 March 2024.
+   This Internet-Draft will expire on 25 April 2024.
 
 Copyright Notice
 
@@ -2924,7 +2924,7 @@ B.1.  Non-correlating Security Token
    resource server to validate an access token back to its relevant
    authority (note that an approach to signing JSON tokens with BBS that
    may be of relevance is the JWP (https://json-web-proofs.github.io/
-   json-web-proofs/draft-jmiller-json-web-proof.html) format and
+   json-web-proofs/draft-ietf-jose-json-web-proof.html) format and
    serialization).  In the context of a protocol like OAuth2.0 the
    access token issued by the authorization server would feature a BBS
    Signature, however instead of the relying party providing this access
