@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2023-10-26T00:08:39.940850+00:00",
+  "timestamp": "2023-10-29T00:09:24.244897+00:00",
   "repo": "decentralized-identity/bbs-signature",
   "labels": [
     {
@@ -34371,7 +34371,7 @@
       "labels": [],
       "body": "Not a breaking change. Implementations used 0-indexing already,. even though was not clearly specified in the draft.",
       "createdAt": "2023-10-23T10:22:44Z",
-      "updatedAt": "2023-10-25T20:12:39Z",
+      "updatedAt": "2023-10-26T19:10:05Z",
       "baseRepository": "decentralized-identity/bbs-signature",
       "baseRefName": "main",
       "baseRefOid": "76936111f906325bc0518a48744b5d4ea62a1086",
@@ -34391,7 +34391,21 @@
           "updatedAt": "2023-10-23T18:35:36Z"
         }
       ],
-      "reviews": []
+      "reviews": [
+        {
+          "id": "PRR_kwDOF8lax85lWyfK",
+          "commit": {
+            "abbreviatedOid": "0bd4c9d"
+          },
+          "author": "tplooker",
+          "authorAssociation": "MEMBER",
+          "state": "APPROVED",
+          "body": "",
+          "createdAt": "2023-10-26T19:10:05Z",
+          "updatedAt": "2023-10-26T19:10:05Z",
+          "comments": []
+        }
+      ]
     }
   ]
 }
