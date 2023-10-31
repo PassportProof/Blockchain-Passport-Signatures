@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2023-10-29T00:09:24.244897+00:00",
+  "timestamp": "2023-10-31T00:08:56.586110+00:00",
   "repo": "decentralized-identity/bbs-signature",
   "labels": [
     {
@@ -34404,6 +34404,65 @@
           "createdAt": "2023-10-26T19:10:05Z",
           "updatedAt": "2023-10-26T19:10:05Z",
           "comments": []
+        }
+      ]
+    },
+    {
+      "number": 291,
+      "id": "PR_kwDOF8lax85eDblJ",
+      "title": "Add privacy considerations",
+      "url": "https://github.com/decentralized-identity/bbs-signature/pull/291",
+      "state": "OPEN",
+      "author": "BasileiosKal",
+      "authorAssociation": "CONTRIBUTOR",
+      "assignees": [],
+      "labels": [],
+      "body": "Closes #256.",
+      "createdAt": "2023-10-29T18:36:44Z",
+      "updatedAt": "2023-10-30T18:23:17Z",
+      "baseRepository": "decentralized-identity/bbs-signature",
+      "baseRefName": "main",
+      "baseRefOid": "76936111f906325bc0518a48744b5d4ea62a1086",
+      "headRepository": "decentralized-identity/bbs-signature",
+      "headRefName": "vasilis/privacy-considerations",
+      "headRefOid": "1b5da3db7d5ea0d993dc3898d698cdf614b3d264",
+      "closedAt": null,
+      "mergedAt": null,
+      "mergedBy": null,
+      "mergeCommit": null,
+      "comments": [],
+      "reviews": [
+        {
+          "id": "PRR_kwDOF8lax85lnTkG",
+          "commit": {
+            "abbreviatedOid": "1b5da3d"
+          },
+          "author": "dwaite",
+          "authorAssociation": "MEMBER",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2023-10-30T18:14:55Z",
+          "updatedAt": "2023-10-30T18:23:17Z",
+          "comments": [
+            {
+              "originalPosition": 12,
+              "body": "```suggestion\r\nWhen a Prover presents a BBS proof to a Verifier, other than the messages they decide to disclose, there are two additional pieces of information that will be revealed. First, the total number of signed messages, which can be inferred from the size of the BBS proof and the length of the disclosed messages list. Second, the index the disclosed messages had in the list of signed messages (see (#proof-generation-proofgen)). This information, if unique to each Prover, could be employed to correlate multiple proof presentations together. As a result, the Issuer should not sign lists of messages with unique lengths or unique indexing. For this reason, it is RECOMMENDED that signed lists of messages are padded to a common length (using either random, or an unused by the application message, like 0 or 1). It is also RECOMMENDED that a constant ordering of messages will be preserved when possible. For example, if an application creates signatures for the messages `[<user_name>, <user_affiliation>, <user_country>]`, then those messages should always be signed in the same order, i.e., first message should always be the user's name (`<user_name>`), second message should always be the user's affiliation (`<user_affiliation>`) and the last message should always be the user's country of origins (`<user_country>`). Provers can employ consistency validation mechanisms, like the ones described in [@I-D.ietf-privacypass-key-consistency], to validate that those values are not used to correlate them.\r\n```",
+              "createdAt": "2023-10-30T18:14:55Z",
+              "updatedAt": "2023-10-30T18:23:17Z"
+            },
+            {
+              "originalPosition": 12,
+              "body": "user_county -> user_country",
+              "createdAt": "2023-10-30T18:15:17Z",
+              "updatedAt": "2023-10-30T18:23:17Z"
+            },
+            {
+              "originalPosition": 6,
+              "body": "Is the typical term in this context coalition or correlation?",
+              "createdAt": "2023-10-30T18:17:56Z",
+              "updatedAt": "2023-10-30T18:23:17Z"
+            }
+          ]
         }
       ]
     }
