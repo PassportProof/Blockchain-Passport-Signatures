@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2023-10-31T00:08:56.586110+00:00",
+  "timestamp": "2023-11-05T00:09:46.961736+00:00",
   "repo": "decentralized-identity/bbs-signature",
   "labels": [
     {
@@ -34371,7 +34371,7 @@
       "labels": [],
       "body": "Not a breaking change. Implementations used 0-indexing already,. even though was not clearly specified in the draft.",
       "createdAt": "2023-10-23T10:22:44Z",
-      "updatedAt": "2023-10-26T19:10:05Z",
+      "updatedAt": "2023-11-03T01:10:06Z",
       "baseRepository": "decentralized-identity/bbs-signature",
       "baseRefName": "main",
       "baseRefOid": "76936111f906325bc0518a48744b5d4ea62a1086",
@@ -34404,6 +34404,26 @@
           "createdAt": "2023-10-26T19:10:05Z",
           "updatedAt": "2023-10-26T19:10:05Z",
           "comments": []
+        },
+        {
+          "id": "PRR_kwDOF8lax85mA7LQ",
+          "commit": {
+            "abbreviatedOid": "0bd4c9d"
+          },
+          "author": "dwaite",
+          "authorAssociation": "MEMBER",
+          "state": "CHANGES_REQUESTED",
+          "body": "",
+          "createdAt": "2023-11-03T01:08:58Z",
+          "updatedAt": "2023-11-03T01:10:06Z",
+          "comments": [
+            {
+              "originalPosition": 5,
+              "body": "I would propose this note be moved down to the middle of the notation section (before mathematical terms), and be expanded with specific examples between the algorithmic and mathematical notations.\r\n\r\nProposed text:\r\n\r\n~~~\r\nNote that arrays in this document use the zero-based numbering common in\r\nmany programming languages, meaning that element indexing starts from 0.\r\nThis is distinct from naming used for explaining mathematical concepts,\r\nwhere natural (one-based) numbering might be used as part of the names\r\nfor clarity in that context.\r\n\r\nFor example,\r\n\r\n```\r\nX = [a_1, a_2, ..., a_n]\r\n```\r\n\r\nwould indicate\r\n\r\n```\r\nX[0] = a_1\r\nX[1] = a_2\r\n// ... and so on, up to\r\nX[n-1] = a_n\r\n```\r\n~~~",
+              "createdAt": "2023-11-03T01:08:59Z",
+              "updatedAt": "2023-11-03T01:10:28Z"
+            }
+          ]
         }
       ]
     },
