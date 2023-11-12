@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2023-11-09T00:09:02.555056+00:00",
+  "timestamp": "2023-11-12T00:09:37.755464+00:00",
   "repo": "decentralized-identity/bbs-signature",
   "labels": [
     {
@@ -6772,6 +6772,22 @@
       "body": "New (updated) draft on blind signatures: https://basileioskal.github.io/blind-bbs-signatures/draft-bbs-blind-signatures.html\r\n\r\nCouple notes:\r\n- It seems that the commitment value added in `CoreSign` in the main draft is not useful after all. Will probably remove it.\r\n- If agreed, the above would probably replace the current draft and hopefully be submitted at the IETF as well.\r\n- Will add test vectors soon.",
       "createdAt": "2023-11-06T16:03:25Z",
       "updatedAt": "2023-11-06T16:03:25Z",
+      "closedAt": null,
+      "comments": []
+    },
+    {
+      "number": 295,
+      "id": "I_kwDOF8lax852V10F",
+      "title": "Serialize returns INVALID",
+      "url": "https://github.com/decentralized-identity/bbs-signature/issues/295",
+      "state": "OPEN",
+      "author": "rolfhaenni",
+      "authorAssociation": "NONE",
+      "assignees": [],
+      "labels": [],
+      "body": "The serialize() algorithm in Section 4.2.4.1 does not include the case where an element of the input array is a string.\r\nHowever, exactly this happens in Lines 4 of coreSign(), where the string comm passed as input value to serialize(). Therefore, currently serialize() would return the value INVALID. Besides, the commitment is missing in Line 2 of CoreVerify().\r\n",
+      "createdAt": "2023-11-09T11:36:43Z",
+      "updatedAt": "2023-11-09T11:36:43Z",
       "closedAt": null,
       "comments": []
     }
@@ -34649,6 +34665,40 @@
           "comments": []
         }
       ]
+    },
+    {
+      "number": 294,
+      "id": "PR_kwDOF8lax85fBQCt",
+      "title": "Update draft-irtf-cfrg-bbs-signatures.md",
+      "url": "https://github.com/decentralized-identity/bbs-signature/pull/294",
+      "state": "OPEN",
+      "author": "alessandropino",
+      "authorAssociation": "NONE",
+      "assignees": [],
+      "labels": [],
+      "body": "## Possible typo\r\nIn section 3.6.3.  CoreProofGen I noticed that \"signature_result\" became \"signature_res\" and fixed that. Specifically\r\n\r\n```\r\n2. init_res = ProofInit(PK, signature_res, generators, random_scalars,\r\n                          header, messages, undisclosed_indexes, api_id)\r\n```\r\n\r\nIf it is not a typo and there is a reason for that, close this pull request.",
+      "createdAt": "2023-11-09T10:40:34Z",
+      "updatedAt": "2023-11-09T11:22:54Z",
+      "baseRepository": "decentralized-identity/bbs-signature",
+      "baseRefName": "main",
+      "baseRefOid": "76936111f906325bc0518a48744b5d4ea62a1086",
+      "headRepository": "alessandropino/bbs-signature",
+      "headRefName": "main",
+      "headRefOid": "d76bd48d237698a283099c3467c362a7194abb4a",
+      "closedAt": null,
+      "mergedAt": null,
+      "mergedBy": null,
+      "mergeCommit": null,
+      "comments": [
+        {
+          "author": "alessandropino",
+          "authorAssociation": "NONE",
+          "body": "## Possible typo 2\r\nIn section 3.7.4. Challenge Calculation I also noticed that the previously defined c_arr became c_array in the next row\r\n```\r\n1. c_arr = (Abar, Bbar, C, R, i1, ..., iR, msg_i1, ..., msg_iR, domain)\r\n2. c_octs = serialize(c_array) || I2OSP(length(ph), 8) || ph\r\n```\r\nAgain if it is not a typo, close this pull request",
+          "createdAt": "2023-11-09T11:22:54Z",
+          "updatedAt": "2023-11-09T11:22:54Z"
+        }
+      ],
+      "reviews": []
     }
   ]
 }
